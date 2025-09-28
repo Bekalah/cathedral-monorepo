@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cathedral Research Mode - Deep Mystical Tech</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #0f1419, #1a1a2e, #16213e);
+            color: #e6f3ff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .cathedral-header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+            padding-bottom: 20px;
+        }
+
+        .cathedral-header h1 {
+            font-size: 3em;
+            background: linear-gradient(45deg, #ffd700, #ffeb3b, #ff9800);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .cathedral-header p {
+            font-size: 1.2em;
+            color: #b39ddb;
+            font-style: italic;
+        }
+
+        .research-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 30px;
+        }
+
+        .panel {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .panel h2 {
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .fusionist-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        .fusionist-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .fusionist-card:hover {
+            background: rgba(255, 215, 0, 0.1);
+            transform: translateY(-2px);
+            border-left-color: #ffd700;
+        }
+
+        .fusionist-card.active {
+            background: rgba(255, 215, 0, 0.15);
+            border-left-color: #ffd700;
+        }
+
+        .fusionist-name {
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 5px;
+        }
+
+        .fusionist-domains {
+            font-size: 0.9em;
+            color: #b39ddb;
+            margin-bottom: 8px;
+        }
+
+        .fusionist-preview {
+            font-size: 0.8em;
+            color: #90caf9;
+            font-style: italic;
+        }
+
+        .main-research-area {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            min-height: 600px;
+            position: relative;
+        }
+
+        .research-display {
+            display: none;
+        }
+
+        .research-display.active {
+            display: block;
+        }
+
+        .master-profile {
+            margin-bottom: 30px;
+        }
+
+        .master-title {
+            font-size: 2.2em;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .master-subtitle {
+            color: #b39ddb;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .key-works {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .key-works h4 {
+            color: #81c784;
+            margin-bottom: 10px;
+        }
+
+        .key-works ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .key-works li {
+            padding: 5px 0;
+            color: #e1f5fe;
+            border-left: 2px solid #81c784;
+            padding-left: 10px;
+            margin: 5px 0;
+        }
+
+        .angel-tech-section {
+            background: rgba(138, 43, 226, 0.1);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .frequency-display {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .frequency-chip {
+            background: rgba(255, 215, 0, 0.2);
+            color: #ffd700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            border: 1px solid rgba(255, 215, 0, 0.4);
+        }
+
+        .practice-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 8px;
+        }
+
+        .practice-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .circuit-selector {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .circuit-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease;
+            color: #e6f3ff;
+        }
+
+        .circuit-btn:hover, .circuit-btn.active {
+            background: rgba(255, 215, 0, 0.2);
+            border-color: #ffd700;
+            color: #ffd700;
+        }
+
+        .tarot-section {
+            margin-top: 30px;
+        }
+
+        .tarot-card-display {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .card-title {
+            font-size: 1.8em;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .card-character {
+            color: #b39ddb;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .card-story {
+            line-height: 1.6;
+            color: #e1f5fe;
+            margin: 15px 0;
+            font-size: 1.05em;
+        }
+
+        .card-healing {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            border-radius: 8px;
+            padding: 12px;
+            margin: 15px 0;
+            color: #c8e6c9;
+        }
+
+        .frequency-player {
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .play-btn {
+            background: #ffd700;
+            color: #1a1a2e;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .play-btn:hover {
+            background: #ffeb3b;
+            transform: scale(1.05);
+        }
+
+        .research-log {
+            max-height: 400px;
+            overflow-y: auto;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .log-entry {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9em;
+        }
+
+        .log-timestamp {
+            color: #90a4ae;
+            font-size: 0.8em;
+        }
+
+        .welcome-screen {
+            text-align: center;
+            padding: 50px;
+            color: #b39ddb;
+        }
+
+        .welcome-screen h3 {
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        @keyframes pulse-gold {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .active-frequency {
+            animation: pulse-gold 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="cathedral-header">
+        <h1>🏛️ Cathedral Research Mode</h1>
+        <p>Deep Mystical Tech • Authentic Angel Tech • Living Fusionist Masters • Fable Tarot</p>
+    </div>
+
+    <div class="research-container">
+        <!-- Left Panel: Fusionist Masters -->
+        <div class="panel">
+            <h2>📚 Fusionist Masters</h2>
+            <div class="fusionist-grid" id="fusionistGrid">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+
+        <!-- Main Research Area -->
+        <div class="main-research-area">
+            <div class="research-display active" id="welcomeDisplay">
+                <div class="welcome-screen">
+                    <h3>Welcome to Cathedral Research Mode</h3>
+                    <p>Select a fusionist master from the left to begin your deep research journey.</p>
+                    <p>This system integrates authentic practices from:</p>
+                    <ul style="text-align: left; margin: 20px 0; list-style-position: inside;">
+                        <li>🔬 Israel Regardie - Golden Dawn & Middle Pillar</li>
+                        <li>🎵 Paul Foster Case - Color-Tone Healing</li>
+                        <li>🧬 Antero Alli - 8-Circuit Angel Tech</li>
+                        <li>🌙 Dion Fortune - Lunar Mysteries</li>
+                        <li>⭐ Aleister Crowley - Thelemic Practices</li>
+                        <li>🎨 Hilma af Klint - Visionary Art Channeling</li>
+                        <li>🧠 Carl Jung - Active Imagination</li>
+                    </ul>
+                    <p>Plus the complete Fable-style Living Tarot deck!</p>
+                </div>
+            </div>
+
+            <!-- Individual master displays will be added dynamically -->
+        </div>
+
+        <!-- Right Panel: Tools & Research Log -->
+        <div class="panel">
+            <h2>🧪 Active Research</h2>
+            
+            <div class="tarot-section">
+                <h3 style="color: #b39ddb; margin-bottom: 15px;">🃏 Living Tarot Draw</h3>
+                <button class="practice-btn" onclick="drawLivingCard()">Draw Fable Card</button>
+                <div id="tarotDisplay"></div>
+            </div>
+
+            <div style="margin: 25px 0;">
+                <h3 style="color: #b39ddb; margin-bottom: 15px;">🧬 Angel Tech Circuits</h3>
+                <div class="circuit-selector" id="circuitSelector">
+                    <!-- Dynamically populated -->
+                </div>
+            </div>
+
+            <div>
+                <h3 style="color: #b39ddb; margin-bottom: 15px;">📝 Research Log</h3>
+                <div class="research-log" id="researchLog">
+                    <div class="log-entry">
+                        <span class="log-timestamp">[System]</span><br>
+                        Cathedral Research Mode initialized. Ready for deep mystical exploration.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        // Research Mode Implementation
+        class CathedralResearchDemo {
+            constructor() {
+                this.fusionistMasters = new Map();
+                this.activeMaster = null;
+                this.loadedTarotDeck = null;
+                this.circuitStates = new Map();
+                
+                this.initializeDemo();
+            }
+
+            async initializeDemo() {
+                await this.loadFusionistMasters();
+                await this.loadTarotDeck();
+                this.setupCircuitInterface();
+                this.renderFusionistGrid();
+                this.addLogEntry('Demo initialized with all fusionist masters and Fable Tarot');
+            }
+
+            async loadFusionistMasters() {
+                // Simplified version of the full research database
+                this.fusionistMasters.set('israel_regardie', {
+                    name: 'Israel Regardie',
+                    domains: ['Golden Dawn', 'Middle Pillar', 'Psychotherapy & Magic'],
+                    keyWorks: [
+                        'The Tree of Life: A Study in Magic',
+                        'The Middle Pillar',
+                        'The Golden Dawn (4 volumes)',
+                        'The Art of True Healing'
+                    ],
+                    angelTech: {
+                        frequencies: ['396Hz', '528Hz', '741Hz'],
+                        practice: 'Daily LBRP and Middle Pillar circulation',
+                        angels: ['Raphael', 'Michael', 'Gabriel', 'Uriel']
+                    },
+                    quote: '"Magic is a convenient word for a whole collection of techniques, all of which involve the mind."',
+                    researchFocus: 'Systematic ritual practice with psychological integration'
+                });
+
+                this.fusionistMasters.set('paul_foster_case', {
+                    name: 'Paul Foster Case',
+                    domains: ['Tarot Qabalah', 'Color-Sound Healing', 'BOTA'],
+                    keyWorks: [
+                        'The Tarot: A Key to the Wisdom of the Ages',
+                        'The True and Invisible Rosicrucian Order',
+                        'The Book of Tokens',
+                        'Highlights of Tarot'
+                    ],
+                    angelTech: {
+                        frequencies: ['261.6Hz', '293.7Hz', '329.6Hz', '349.2Hz'],
+                        practice: 'Daily Tarot key meditation with color-tone correspondence',
+                        colors: ['pale_yellow', 'yellow', 'blue', 'emerald_green']
+                    },
+                    quote: '"The Tarot is a pictorial representation of the forces of Nature as they operate in the mental, psychical, and spiritual worlds."',
+                    researchFocus: 'Color and sound frequency healing through Tarot meditation'
+                });
+
+                this.fusionistMasters.set('antero_alli', {
+                    name: 'Antero Alli',
+                    domains: ['Angel Tech', 'ParaTheatrical ReSearch', '8-Circuit Brain'],
+                    keyWorks: [
+                        'Angel Tech: A Modern Shaman\'s Guide to Reality Selection',
+                        'The Eight-Circuit Brain',
+                        'ParaTheatrical ReSearch',
+                        'Vertical Oracle'
+                    ],
+                    angelTech: {
+                        frequencies: ['256Hz', '288Hz', '324Hz', '364Hz', '408Hz', '459Hz', '516Hz', '580Hz'],
+                        practice: '8-circuit navigation through ritual theater',
+                        circuits: ['Survival', 'Emotional', 'Symbolic', 'Social', 'Somatic', 'Metaprogramming', 'Morphogenetic', 'Quantum']
+                    },
+                    quote: '"Angel Tech is about learning to navigate between different reality tunnels with conscious intention."',
+                    researchFocus: 'Embodied consciousness development through ritual performance'
+                });
+
+                this.fusionistMasters.set('dion_fortune', {
+                    name: 'Dion Fortune',
+                    domains: ['Mystical Qabalah', 'Psychic Defense', 'Glastonbury Mysteries'],
+                    keyWorks: [
+                        'The Mystical Qabalah',
+                        'Psychic Self-Defense',
+                        'The Sea Priestess',
+                        'Moon Magic'
+                    ],
+                    angelTech: {
+                        frequencies: ['210.42Hz', '221.23Hz', '234.16Hz', '207.36Hz'],
+                        practice: 'Lunar cycle attunement and goddess invocation',
+                        goddesses: ['Isis', 'Diana', 'Hecate', 'Brigid']
+                    },
+                    quote: '"The Tree of Life is the skeleton upon which the body of Western esoteric tradition is built."',
+                    researchFocus: 'Lunar mysteries and feminine divine principles in magic'
+                });
+
+                this.fusionistMasters.set('hilma_af_klint', {
+                    name: 'Hilma af Klint',
+                    domains: ['Visionary Art', 'Spiritual Geometry', 'Mediumship'],
+                    keyWorks: [
+                        'The Ten Largest',
+                        'Altarpieces', 
+                        'The Swan Series',
+                        'Tree of Knowledge Series'
+                    ],
+                    angelTech: {
+                        frequencies: ['432Hz', '528Hz', '963Hz'],
+                        practice: 'Automatic art creation with spiritual guides',
+                        guides: ['Amaliel', 'Ananda', 'Clemens', 'Esther', 'Gregor']
+                    },
+                    quote: '"The pictures were painted directly through me, without any preliminary drawings, and with great force."',
+                    researchFocus: 'Channeled art as spiritual practice and healing medium'
+                });
+
+                this.fusionistMasters.set('carl_jung', {
+                    name: 'Carl Gustav Jung',
+                    domains: ['Analytical Psychology', 'Collective Unconscious', 'Active Imagination'],
+                    keyWorks: [
+                        'The Red Book (Liber Novus)',
+                        'Psychology and Alchemy',
+                        'Man and His Symbols',
+                        'Memories, Dreams, Reflections'
+                    ],
+                    angelTech: {
+                        frequencies: ['40Hz', '8Hz', '4Hz'],
+                        practice: 'Active imagination dialogue with archetypes',
+                        archetypes: ['Anima/Animus', 'Shadow', 'Wise Old Man', 'Great Mother', 'Self']
+                    },
+                    quote: '"Your vision becomes clear when you look into your heart. Who looks outside, dreams. Who looks inside, awakens."',
+                    researchFocus: 'Psychological integration through archetypal dialogue and individuation'
+                });
+            }
+
+            async loadTarotDeck() {
+                // Load the complete Fable Tarot deck
+                try {
+                    const response = await fetch('./data/fable-tarot-complete.json');
+                    this.loadedTarotDeck = await response.json();
+                    this.addLogEntry('Fable Tarot deck loaded: 78 cards with mystical realism stories');
+                } catch (error) {
+                    console.warn('Could not load Tarot deck, using sample data');
+                    this.loadedTarotDeck = this.createSampleTarotDeck();
+                }
+            }
+
+            createSampleTarotDeck() {
+                return {
+                    major_arcana: {
+                        "0": {
+                            name: "The Fool",
+                            character: "Rebecca Respawn", 
+                            fable_story: "A young code-witch stands at the cliff edge of possibility, her laptop bag slung over her shoulder, USB cables spilling out like prayer beads. Digital butterflies emerge from her screen, each carrying a fragment of ancient wisdom into the quantum field.",
+                            case_frequency: "261.6Hz",
+                            healing_function: "Courage for new beginnings, trust in the unknown"
+                        },
+                        "1": {
+                            name: "The Magician",
+                            character: "Virelai Ezra Lux",
+                            fable_story: "In a tower laboratory that defies Euclidean geometry, the Octarine Witch weaves digital spells from impossible colors. Before her float the four elemental tablets - earth, air, fire, and water made manifest in pure code.",
+                            case_frequency: "293.7Hz",
+                            healing_function: "Creative manifestation, personal power activation"
+                        }
+                    }
+                };
+            }
+
+            setupCircuitInterface() {
+                const circuits = [
+                    { id: 1, name: 'Survival', freq: '256Hz' },
+                    { id: 2, name: 'Emotional', freq: '288Hz' },
+                    { id: 3, name: 'Symbolic', freq: '324Hz' },
+                    { id: 4, name: 'Social', freq: '364Hz' },
+                    { id: 5, name: 'Somatic', freq: '408Hz' },
+                    { id: 6, name: 'Meta', freq: '459Hz' },
+                    { id: 7, name: 'Morphic', freq: '516Hz' },
+                    { id: 8, name: 'Quantum', freq: '580Hz' }
+                ];
+
+                const container = document.getElementById('circuitSelector');
+                container.innerHTML = '';
+
+                circuits.forEach(circuit => {
+                    const btn = document.createElement('div');
+                    btn.className = 'circuit-btn';
+                    btn.innerHTML = `<strong>${circuit.id}</strong><br>${circuit.name}<br><small>${circuit.freq}</small>`;
+                    btn.onclick = () => this.activateCircuit(circuit.id, circuit.name, circuit.freq);
+                    container.appendChild(btn);
+                });
+            }
+
+            renderFusionistGrid() {
+                const container = document.getElementById('fusionistGrid');
+                container.innerHTML = '';
+
+                this.fusionistMasters.forEach((master, key) => {
+                    const card = document.createElement('div');
+                    card.className = 'fusionist-card';
+                    card.onclick = () => this.selectMaster(key, master);
+                    
+                    card.innerHTML = `
+                        <div class="fusionist-name">${master.name}</div>
+                        <div class="fusionist-domains">${master.domains.join(' • ')}</div>
+                        <div class="fusionist-preview">"${master.quote.substring(0, 60)}..."</div>
+                    `;
+                    
+                    container.appendChild(card);
+                });
+            }
+
+            selectMaster(key, master) {
+                // Update active selection
+                document.querySelectorAll('.fusionist-card').forEach(card => {
+                    card.classList.remove('active');
+                });
+                event.currentTarget.classList.add('active');
+
+                this.activeMaster = master;
+                this.displayMasterResearch(master);
+                this.addLogEntry(`Studying ${master.name}: ${master.researchFocus}`);
+            }
+
+            displayMasterResearch(master) {
+                // Hide welcome, show research
+                document.getElementById('welcomeDisplay').classList.remove('active');
+                
+                let researchDisplay = document.getElementById('masterResearch');
+                if (!researchDisplay) {
+                    researchDisplay = document.createElement('div');
+                    researchDisplay.id = 'masterResearch';
+                    researchDisplay.className = 'research-display active';
+                    document.querySelector('.main-research-area').appendChild(researchDisplay);
+                } else {
+                    researchDisplay.classList.add('active');
+                }
+
+                researchDisplay.innerHTML = `
+                    <div class="master-profile">
+                        <div class="master-title">${master.name}</div>
+                        <div class="master-subtitle">${master.domains.join(' • ')}</div>
+                        
+                        <div class="key-works">
+                            <h4>📖 Key Works for Study</h4>
+                            <ul>
+                                ${master.keyWorks.map(work => `<li>${work}</li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="angel-tech-section">
+                            <h4 style="color: #e1bee7; margin-bottom: 15px;">👼 Angel Tech Integration</h4>
+                            <p><strong>Practice:</strong> ${master.angelTech.practice}</p>
+                            
+                            <div style="margin: 15px 0;">
+                                <strong>Healing Frequencies:</strong>
+                                <div class="frequency-display">
+                                    ${master.angelTech.frequencies.map(freq => 
+                                        `<span class="frequency-chip" onclick="playFrequency('${freq}')">${freq}</span>`
+                                    ).join('')}
+                                </div>
+                            </div>
+
+                            <button class="practice-btn" onclick="startPractice('${master.name}')">
+                                🧘 Start Practice Session
+                            </button>
+                        </div>
+
+                        <blockquote style="
+                            border-left: 3px solid #ffd700;
+                            padding-left: 15px;
+                            margin: 20px 0;
+                            font-style: italic;
+                            color: #e1f5fe;
+                        ">
+                            ${master.quote}
+                        </blockquote>
+
+                        <div style="
+                            background: rgba(76, 175, 80, 0.1);
+                            border: 1px solid rgba(76, 175, 80, 0.3);
+                            border-radius: 8px;
+                            padding: 15px;
+                            margin: 15px 0;
+                        ">
+                            <strong>Research Focus:</strong> ${master.researchFocus}
+                        </div>
+                    </div>
+                `;
+            }
+
+            drawLivingCard() {
+                if (!this.loadedTarotDeck || !this.loadedTarotDeck.major_arcana) {
+                    this.addLogEntry('⚠️ Tarot deck not loaded');
+                    return;
+                }
+
+                const majorArcana = this.loadedTarotDeck.major_arcana;
+                const cardKeys = Object.keys(majorArcana);
+                const randomKey = cardKeys[Math.floor(Math.random() * cardKeys.length)];
+                const card = majorArcana[randomKey];
+
+                const display = document.getElementById('tarotDisplay');
+                display.innerHTML = `
+                    <div class="tarot-card-display">
+                        <div class="card-title">${card.name}</div>
+                        <div class="card-character">Character: ${card.character}</div>
+                        <div class="card-story">${card.fable_story}</div>
+                        <div class="card-healing">
+                            <strong>Healing Function:</strong> ${card.healing_function}
+                        </div>
+                        <div class="frequency-player">
+                            <strong>Case Frequency:</strong> ${card.case_frequency}
+                            <br><br>
+                            <button class="play-btn" onclick="playFrequency('${card.case_frequency}')">
+                                🎵 Play Healing Frequency
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                this.addLogEntry(`🃏 Drew ${card.name}: ${card.healing_function}`);
+            }
+
+            activateCircuit(number, name, frequency) {
+                // Visual feedback
+                document.querySelectorAll('.circuit-btn').forEach(btn => btn.classList.remove('active'));
+                event.currentTarget.classList.add('active');
+
+                // Log activation
+                this.addLogEntry(`🧬 Activated Circuit ${number} (${name}) - ${frequency}`);
+                
+                // In a real implementation, this would trigger specific practices
+                this.simulateCircuitActivation(number, name, frequency);
+            }
+
+            simulateCircuitActivation(number, name, frequency) {
+                const practices = {
+                    1: 'Grounding breathwork and earth connection',
+                    2: 'Emotional flow and territory exploration', 
+                    3: 'Symbol creation and meaning-making',
+                    4: 'Heart coherence and social bonding',
+                    5: 'Body awareness and somatic intelligence',
+                    6: 'Belief examination and reality hacking',
+                    7: 'Ancestral memory and collective patterns',
+                    8: 'Non-local consciousness and quantum awareness'
+                };
+
+                setTimeout(() => {
+                    this.addLogEntry(`💫 ${practices[number]} - Integration beginning`);
+                }, 1000);
+            }
+
+            addLogEntry(message) {
+                const log = document.getElementById('researchLog');
+                const entry = document.createElement('div');
+                entry.className = 'log-entry';
+                entry.innerHTML = `
+                    <span class="log-timestamp">[${new Date().toLocaleTimeString()}]</span><br>
+                    ${message}
+                `;
+                log.insertBefore(entry, log.firstChild);
+                
+                // Limit log entries
+                const entries = log.querySelectorAll('.log-entry');
+                if (entries.length > 20) {
+                    log.removeChild(entries[entries.length - 1]);
+                }
+            }
+        }
+
+        // Global functions for interaction
+        window.playFrequency = (frequency) => {
+            console.log(`🎵 Playing healing frequency: ${frequency}`);
+            document.querySelector('.frequency-player')?.classList.add('active-frequency');
+            
+            // In a real implementation, this would use Web Audio API
+            setTimeout(() => {
+                document.querySelector('.frequency-player')?.classList.remove('active-frequency');
+            }, 3000);
+            
+            window.researchDemo?.addLogEntry(`🎵 Playing ${frequency} for healing and attunement`);
+        };
+
+        window.startPractice = (masterName) => {
+            console.log(`🧘 Starting practice session with ${masterName}`);
+            window.researchDemo?.addLogEntry(`🧘 Beginning deep practice session: ${masterName}`);
+        };
+
+        window.drawLivingCard = () => {
+            window.researchDemo?.drawLivingCard();
+        };
+
+        // Initialize the demo
+        window.researchDemo = new CathedralResearchDemo();
+        
+        // Welcome message
+        setTimeout(() => {
+            window.researchDemo?.addLogEntry('🏛️ Welcome to Cathedral Research Mode - where authentic mystical practices meet modern healing technology');
+            window.researchDemo?.addLogEntry('📚 Select a fusionist master to begin your deep research journey');
+        }, 500);
+    </script>
+</body>
+</html>
