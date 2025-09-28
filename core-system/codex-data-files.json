@@ -1,0 +1,43 @@
+// data/octagram_nodes_full.json
+[]
+
+// data/core_node_map.json
+{
+  "nodes": []
+}
+
+// data/circuit_board_map.json
+{
+  "modules": [
+    {
+      "name": "cosmogenesis-atelier",
+      "repo": "github.com/your-org/cosmogenesis-atelier",
+      "status": "planned",
+      "endpoint": "",
+      "contracts": []
+    },
+    {
+      "name": "codex-engines (Fly.io)",
+      "repo": "github.com/your-org/codex-engines",
+      "status": "live",
+      "endpoint": "https://codex-engines.fly.dev",
+      "contracts": [
+        { "method": "GET", "path": "/health" },
+        { "method": "GET", "path": "/v1/codex/ping" }
+      ]
+    }
+  ]
+}
+
+// data/crystal_harmonics.json
+{
+  "entries": [
+    {
+      "number": 0,
+      "crystal": "",
+      "pigment": "",
+      "frequency": "",
+      "notes": ""
+    }
+  ]
+}

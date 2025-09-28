@@ -1,0 +1,95 @@
+{
+  "name": "cathedral-monorepo",
+  "version": "1.0.0",
+  "description": "Cathedral of Circuits - Codex 144:99 Living Digital Grimoire Monorepo",
+  "private": true,
+  "type": "module",
+  "author": {
+    "name": "Rebecca Susan Lemke (Rebecca Respawn)",
+    "email": "your-email@domain.com",
+    "url": "https://github.com/Bekalah",
+    "orcid": "0009-0002-2834-3956"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bekalah/cathedral-monorepo.git"
+  },
+  "keywords": [
+    "cathedral",
+    "codex",
+    "sacred-geometry",
+    "trauma-informed",
+    "healing-tech",
+    "grimoire",
+    "alchemy",
+    "reiki",
+    "kabbalah"
+  ],
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "build:all": "pnpm build",
+    "preview": "pnpm -r --parallel preview",
+    "deploy": "pnpm build:all && wrangler pages publish apps/codex-portal/dist",
+    "deploy:all": "pnpm run deploy:codex && pnpm run deploy:stone && pnpm run deploy:circuit",
+    "deploy:codex": "cd apps/codex-portal && pnpm build && wrangler pages publish dist",
+    "deploy:stone": "cd apps/stone-realms && pnpm build && wrangler pages publish dist",
+    "deploy:circuit": "cd apps/circuit-grimoire && pnpm build && wrangler pages publish dist",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "clean": "pnpm -r clean && rm -rf node_modules",
+    "install:all": "pnpm install && pnpm -r install"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "vite": "^4.4.0",
+    "wrangler": "^3.0.0",
+    "pnpm": "^8.0.0"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "shared/*"
+  ],
+  "cathedral": {
+    "codex": "144:99",
+    "version": "1.0.0",
+    "architecture": "monorepo",
+    "deployment": "cloudflare-pages",
+    "packages": {
+      "cosmogenesis-learning-engine": {
+        "element": "Mind",
+        "symbol": "🧠",
+        "role": "144:99 spiral logic, learning toggles, sacred pattern engine"
+      },
+      "circuitum99": {
+        "element": "Soul", 
+        "symbol": "🜂",
+        "role": "33-chapter living grimoire, storybook with angelic/demonic gates"
+      },
+      "stone-cathedral": {
+        "element": "Body",
+        "symbol": "🜃", 
+        "role": "Realms (Rosslyn, Hilma, Reiki) for immersive art & sacred geometry"
+      },
+      "liber-arcanae": {
+        "element": "Companions",
+        "symbol": "✴",
+        "role": "Tarot deck, Daemon Echoes, Angels, Taras, Quan Yin (all toggle helpers)"
+      }
+    },
+    "deployment_urls": {
+      "main": "cathedral.pages.dev",
+      "codex": "codex.cathedral144.pages.dev", 
+      "stone": "realms.cathedral144.pages.dev",
+      "circuit": "grimoire.cathedral144.pages.dev"
+    }
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.6.0"
+}
