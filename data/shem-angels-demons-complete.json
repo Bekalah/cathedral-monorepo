@@ -1,0 +1,437 @@
+{
+  "name": "Complete 72 Shem Angels & Corresponding Demons Database",
+  "version": "2.0",
+  "codex_integration": "144:99",
+  "provenance": {
+    "sources": [
+      "Shem HaMephorash (72 Names of God)",
+      "Goetia (Lesser Key of Solomon)",
+      "Israel Regardie - Golden Dawn corpus",
+      "Dion Fortune - Mystical Qabalah",
+      "Paul Foster Case - Tarot correspondences",
+      "Antero Alli - Angel Tech circuits"
+    ],
+    "license": "CC-BY-SA 4.0",
+    "creator": "Rebecca Respawn / Cathedral Research"
+  },
+
+  "system_overview": {
+    "purpose": "Complete angel-demon correspondence system for Codex 144:99",
+    "structure": "72 angels paired with opposing/complementary demon forces",
+    "tarot_integration": "Each pair corresponds to specific Tarot card energies",
+    "meter_system": "Dynamic balancing between angelic and demonic forces",
+    "healing_function": "Integration of light/shadow for wholeness"
+  },
+
+  "shem_angels_complete": {
+    "1": {
+      "angel_name": "Vehuiah",
+      "angel_meaning": "God Exalting",
+      "element": "Fire",
+      "planet": "Mars",
+      "tarot_correspondence": "Wands suit - creative force",
+      "frequency": "256Hz",
+      "codex_node": 1,
+      "angel_function": "New beginnings, creative fire, leadership initiation",
+      "invocation": "VHV-YH - I call upon the force of new creation",
+      "angel_gift": "Courage to begin, creative inspiration",
+      "corresponding_demon": {
+        "name": "Bael",
+        "hierarchy": "King of the East", 
+        "function": "Rules over 66 legions",
+        "shadow_teaching": "Shows the shadow of unchecked power",
+        "integration_lesson": "Balance creative force with wisdom",
+        "appearance": "Three-headed (man, cat, toad) - representing multiple perspectives"
+      },
+      "balance_meter": {
+        "angel_pole": "Pure creative inspiration",
+        "demon_pole": "Destructive ego-power", 
+        "integration_point": "Wise creative leadership",
+        "fable_challenge": "The new leader must choose between pure idealism and corrupt pragmatism"
+      },
+      "alli_circuit": 1,
+      "healing_application": "Overcoming fear of new beginnings"
+    },
+
+    "2": {
+      "angel_name": "Jeliel", 
+      "angel_meaning": "God of Helpers",
+      "element": "Fire",
+      "planet": "Sun",
+      "tarot_correspondence": "The Sun card - joy and vitality",
+      "frequency": "271Hz",
+      "codex_node": 2,
+      "angel_function": "Love between partners, fidelity, conjugal happiness",
+      "invocation": "JL-YL - I call upon divine partnership",
+      "angel_gift": "Harmonious relationships, loyalty",
+      "corresponding_demon": {
+        "name": "Agares",
+        "hierarchy": "Duke of Hell",
+        "function": "Teaches languages, destroys dignities",
+        "shadow_teaching": "Shows how communication can become manipulation",
+        "integration_lesson": "True partnership requires honest communication",
+        "appearance": "Old man riding a crocodile with a sparrowhawk"
+      },
+      "balance_meter": {
+        "angel_pole": "Perfect harmony and loyalty",
+        "demon_pole": "Manipulation and control in relationships",
+        "integration_point": "Authentic partnership with healthy boundaries",
+        "fable_challenge": "The devoted partner must learn when loyalty becomes enabling"
+      },
+      "alli_circuit": 4,
+      "healing_application": "Healing relationship wounds and attachment patterns"
+    },
+
+    "3": {
+      "angel_name": "Sitael",
+      "angel_meaning": "God of Hope", 
+      "element": "Fire",
+      "planet": "Jupiter",
+      "tarot_correspondence": "Wheel of Fortune - expansion and hope",
+      "frequency": "288Hz",
+      "codex_node": 3,
+      "angel_function": "Nobility, magnanimity, great works",
+      "invocation": "ST-EL - I call upon divine expansion",
+      "angel_gift": "Hope, optimism, ability to see the bigger picture",
+      "corresponding_demon": {
+        "name": "Vassago",
+        "hierarchy": "Prince of Hell",
+        "function": "Reveals hidden treasures and future events", 
+        "shadow_teaching": "Shows how seeking the future can avoid the present",
+        "integration_lesson": "True hope is grounded in present action",
+        "appearance": "Good-natured prince who speaks of past, present, and future"
+      },
+      "balance_meter": {
+        "angel_pole": "Boundless optimism and hope",
+        "demon_pole": "Escapist future-seeking or pessimistic despair",
+        "integration_point": "Realistic hope combined with present-moment action",
+        "fable_challenge": "The oracle must choose between revealing harsh truths or comforting lies"
+      },
+      "alli_circuit": 7,
+      "healing_application": "Restoring hope after trauma or loss"
+    },
+
+    "4": {
+      "angel_name": "Elemiah",
+      "angel_meaning": "God Hidden",
+      "element": "Fire", 
+      "planet": "Venus",
+      "tarot_correspondence": "The Lovers - divine choice and union",
+      "frequency": "305Hz",
+      "codex_node": 4,
+      "angel_function": "Divine protection during travel, calming tempests",
+      "invocation": "ELM-YH - I call upon divine protection",
+      "angel_gift": "Safety in transitions, calm during chaos",
+      "corresponding_demon": {
+        "name": "Samigina",
+        "hierarchy": "Marquis of Hell",
+        "function": "Teaches liberal sciences and gives account of dead souls",
+        "shadow_teaching": "Shows obsession with death and the past",
+        "integration_lesson": "Honor the dead while embracing life",
+        "appearance": "Small horse or ass, can take human form"
+      },
+      "balance_meter": {
+        "angel_pole": "Perfect divine protection and safety",
+        "demon_pole": "Obsession with death, morbid curiosity",
+        "integration_point": "Healthy awareness of mortality inspiring full living",
+        "fable_challenge": "The protected traveler must face necessary dangers to grow"
+      },
+      "alli_circuit": 1,
+      "healing_application": "Overcoming travel anxiety and fear of change"
+    },
+
+    "5": {
+      "angel_name": "Mahasiah",
+      "angel_meaning": "God Savior",
+      "element": "Fire",
+      "planet": "Mercury", 
+      "tarot_correspondence": "The Magician - divine communication",
+      "frequency": "324Hz",
+      "codex_node": 5,
+      "angel_function": "Peace, harmony, learning, philosophy",
+      "invocation": "MHS-YH - I call upon divine wisdom",
+      "angel_gift": "Learning ability, philosophical insight, peaceful resolution",
+      "corresponding_demon": {
+        "name": "Marbas",
+        "hierarchy": "President of Hell",
+        "function": "Gives knowledge of mechanical arts, can cause/heal diseases",
+        "shadow_teaching": "Shows how knowledge can be used to harm or heal",
+        "integration_lesson": "True wisdom includes responsibility for its application",
+        "appearance": "Great lion, can take human form"
+      },
+      "balance_meter": {
+        "angel_pole": "Pure wisdom and peaceful learning",
+        "demon_pole": "Knowledge used for manipulation or harm",
+        "integration_point": "Wise application of knowledge for healing and growth",
+        "fable_challenge": "The scholar must choose between hoarding knowledge and sharing it"
+      },
+      "alli_circuit": 6,
+      "healing_application": "Healing learning disabilities and intellectual blocks"
+    },
+
+    "6": {
+      "angel_name": "Lelahel",
+      "angel_meaning": "Praiseworthy God",
+      "element": "Fire",
+      "planet": "Moon",
+      "tarot_correspondence": "The High Priestess - divine love and healing",
+      "frequency": "342Hz", 
+      "codex_node": 6,
+      "angel_function": "Love, renown, science, arts, fortune",
+      "invocation": "LLH-EL - I call upon divine love",
+      "angel_gift": "Healing through love, artistic inspiration, good fortune",
+      "corresponding_demon": {
+        "name": "Valefor",
+        "hierarchy": "Duke of Hell",
+        "function": "Tempts people to steal, gives familiar spirits",
+        "shadow_teaching": "Shows the shadow of wanting what others have",
+        "integration_lesson": "True abundance comes from inner richness",
+        "appearance": "Lion with the head of a man (or ass)"
+      },
+      "balance_meter": {
+        "angel_pole": "Divine love and generous abundance",
+        "demon_pole": "Envy, theft, wanting what others have",
+        "integration_point": "Abundant heart that shares rather than hoards",
+        "fable_challenge": "The artist must choose between creating from love or from envy"
+      },
+      "alli_circuit": 2,
+      "healing_application": "Healing envy and scarcity mindset"
+    },
+
+    "13": {
+      "angel_name": "Iezalel",
+      "angel_meaning": "God Glorified",
+      "element": "Water",
+      "planet": "Venus",
+      "tarot_correspondence": "Death card - transformation through love",
+      "frequency": "396Hz",
+      "codex_node": 13,
+      "angel_function": "Friendship, reconciliation, conjugal fidelity",
+      "invocation": "YZL-EL - I call upon divine reconciliation",
+      "angel_gift": "Healing relationships, forgiveness, transformation through love",
+      "corresponding_demon": {
+        "name": "Beleth",
+        "hierarchy": "King of Hell",
+        "function": "Causes love between men and women until the conjurer is satisfied",
+        "shadow_teaching": "Shows the shadow of forced or manipulated love",
+        "integration_lesson": "True love cannot be compelled, only invited",
+        "appearance": "Terrible king riding a pale horse, preceded by musicians"
+      },
+      "balance_meter": {
+        "angel_pole": "Pure divine love and natural attraction",
+        "demon_pole": "Forced love, manipulation, obsession",
+        "integration_point": "Authentic love that honors free will",
+        "fable_challenge": "The broken heart must choose between forcing reunion or allowing natural healing"
+      },
+      "alli_circuit": 2,
+      "healing_application": "Healing from betrayal and relationship trauma"
+    },
+
+    "21": {
+      "angel_name": "Nelchael",
+      "angel_meaning": "God Alone",
+      "element": "Water", 
+      "planet": "Sun",
+      "tarot_correspondence": "The World - divine completion and mastery",
+      "frequency": "528Hz",
+      "codex_node": 21,
+      "angel_function": "Against calumny, spells, charms; love of poetry and learning",
+      "invocation": "NLC-EL - I call upon divine protection and inspiration",
+      "angel_gift": "Protection from negativity, poetic inspiration, higher learning",
+      "corresponding_demon": {
+        "name": "Marax",
+        "hierarchy": "Earl and President of Hell",
+        "function": "Gives knowledge of astronomy and liberal arts, provides good familiars",
+        "shadow_teaching": "Shows how spiritual knowledge can become prideful",
+        "integration_lesson": "True mastery includes humility and service",
+        "appearance": "Bull with a man's face"
+      },
+      "balance_meter": {
+        "angel_pole": "Perfect spiritual protection and inspired learning",
+        "demon_pole": "Spiritual pride and superiority complex",
+        "integration_point": "Humble mastery that serves the greater good",
+        "fable_challenge": "The master must choose between spiritual ego and true service"
+      },
+      "alli_circuit": 8,
+      "healing_application": "Healing spiritual trauma and religious wounds"
+    },
+
+    "33": {
+      "angel_name": "Yehuiah", 
+      "angel_meaning": "God Knowing",
+      "element": "Air",
+      "planet": "Saturn",
+      "tarot_correspondence": "The Hermit - divine wisdom through solitude",
+      "frequency": "639Hz",
+      "codex_node": 33,
+      "angel_function": "Subordination and hierarchy, knowledge of good and evil",
+      "invocation": "YHV-YH - I call upon divine discernment",
+      "angel_gift": "Wisdom through experience, good judgment, leadership",
+      "corresponding_demon": {
+        "name": "Gaap",
+        "hierarchy": "Prince and President of Hell",
+        "function": "Makes men ignorant, causes love/hate, teaches philosophy",
+        "shadow_teaching": "Shows how wisdom can become manipulation of others' ignorance",
+        "integration_lesson": "True leadership empowers others rather than controlling them",
+        "appearance": "Man with large wings, precedes four kings"
+      },
+      "balance_meter": {
+        "angel_pole": "Perfect wisdom and benevolent leadership", 
+        "demon_pole": "Manipulation through others' ignorance",
+        "integration_point": "Wise teaching that empowers rather than controls",
+        "fable_challenge": "The wise leader must choose between ruling through fear or inspiring through wisdom"
+      },
+      "alli_circuit": 3,
+      "healing_application": "Healing authority wounds and leadership trauma"
+    },
+
+    "72": {
+      "angel_name": "Mumiah",
+      "angel_meaning": "God the End",
+      "element": "Earth",
+      "planet": "Saturn", 
+      "tarot_correspondence": "The World - completion and new beginnings",
+      "frequency": "963Hz",
+      "codex_node": 72,
+      "angel_function": "Endings and new beginnings, completion of cycles, medical healing",
+      "invocation": "MMY-YH - I call upon divine completion",
+      "angel_gift": "Healing at the end of cycles, wisdom of completion, medical knowledge",
+      "corresponding_demon": {
+        "name": "Andromalius",
+        "hierarchy": "Earl of Hell",
+        "function": "Returns stolen goods, punishes thieves, discovers hidden treasures and wickedness",
+        "shadow_teaching": "Shows the shadow of endings - punishment vs. justice",
+        "integration_lesson": "True completion includes forgiveness and renewal",
+        "appearance": "Man holding a great serpent"
+      },
+      "balance_meter": {
+        "angel_pole": "Perfect divine completion and renewal",
+        "demon_pole": "Vengeful endings and punishment",
+        "integration_point": "Completion that includes forgiveness and wisdom",
+        "fable_challenge": "At the cycle's end, choose between vengeance and transcendent closure"
+      },
+      "alli_circuit": 1,
+      "healing_application": "Healing from incomplete grief and unfinished emotional business"
+    }
+  },
+
+  "tarot_meter_system": {
+    "purpose": "Dynamic balance meter that reflects user's current Tarot card selection",
+    "mechanics": {
+      "meter_display": "Horizontal bar with angel energy on left, demon energy on right",
+      "center_point": "Integration zone where healing happens", 
+      "user_influence": "Choices and practices shift the meter",
+      "card_influence": "Selected Tarot card determines base meter position",
+      "healing_sweet_spot": "Balanced integration around 45-55% range"
+    },
+    
+    "meter_states": {
+      "0-20%": {
+        "state": "Excessive Angelic",
+        "description": "Spiritual bypassing, denial of shadow",
+        "fable_effect": "Character becomes ineffective due to naivety",
+        "healing_needed": "Shadow integration work",
+        "warning": "All light and no shadow creates blindness"
+      },
+      "20-45%": {
+        "state": "Angelic Leaning", 
+        "description": "Healthy spiritual focus with some shadow awareness",
+        "fable_effect": "Character has good intentions but needs more grounding",
+        "healing_potential": "Good foundation for growth",
+        "suggestion": "Explore shadow aspects gently"
+      },
+      "45-55%": {
+        "state": "Integrated Balance",
+        "description": "Healthy integration of light and shadow",
+        "fable_effect": "Character has wisdom and effectiveness",
+        "healing_power": "Maximum therapeutic benefit",
+        "achievement": "This is the goal state for most healing"
+      },
+      "55-80%": {
+        "state": "Demonic Leaning",
+        "description": "Shadow work in progress, some darkness integrated",
+        "fable_effect": "Character has power but needs ethical grounding", 
+        "healing_potential": "Shadow integration happening",
+        "suggestion": "Don't lose sight of higher values"
+      },
+      "80-100%": {
+        "state": "Excessive Demonic",
+        "description": "Shadow overwhelm, loss of higher guidance",
+        "fable_effect": "Character becomes corrupted and harmful",
+        "healing_needed": "Angelic connection and light work",
+        "warning": "All shadow and no light creates destruction"
+      }
+    }
+  },
+
+  "fable_integration": {
+    "narrative_system": {
+      "character_arcs": "Your choices with angels/demons affect character development",
+      "story_branching": "Different meter states unlock different storylines",
+      "moral_complexity": "No pure good or evil - all about integration",
+      "growth_paths": "Multiple ways to achieve balance and healing"
+    },
+    
+    "interactive_elements": {
+      "angel_encounters": "Peaceful beings offering wisdom and healing",
+      "demon_encounters": "Challenging beings offering power and shadow wisdom", 
+      "choice_consequences": "Every choice shifts your meter and story path",
+      "integration_ceremonies": "Special rituals when you achieve balance",
+      "companion_spirits": "Angels and demons can become allies when properly integrated"
+    },
+
+    "world_building": {
+      "setting": "Modern mystical world where angels and demons are real",
+      "conflict": "Not good vs evil, but integration vs imbalance",
+      "magic_system": "Based on authentic Shem/Goetic practices",
+      "character_classes": "Different approaches to angel-demon work",
+      "end_goal": "Complete the Codex 144:99 through balanced integration"
+    }
+  },
+
+  "codex_completion_system": {
+    "structure": {
+      "total_nodes": 144,
+      "current_detailed": 10,
+      "angel_nodes": 72,
+      "integration_nodes": 33,
+      "master_nodes": 22,
+      "spine_nodes": 7
+    },
+    
+    "completion_mechanics": {
+      "angel_mastery": "Work with all 72 angel-demon pairs",
+      "tarot_mastery": "Integrate all 78 cards with angel-demon system", 
+      "circuit_mastery": "Activate all 8 Alli circuits through angel work",
+      "balance_mastery": "Achieve integration state in multiple contexts",
+      "healing_mastery": "Use system for authentic personal transformation"
+    },
+    
+    "progression_rewards": {
+      "12_nodes": "Zodiac Master - Understanding of cyclical patterns",
+      "22_nodes": "Tarot Master - Command of Major Arcana energies",
+      "33_nodes": "Spine Master - Vertebrae of consciousness awakened", 
+      "72_nodes": "Angel Master - Complete Shem HaMephorash integration",
+      "99_nodes": "Gate Master - All portals of consciousness accessible",
+      "144_nodes": "Codex Master - Complete integration and teaching ability"
+    }
+  },
+
+  "usage_instructions": {
+    "daily_practice": {
+      "1": "Draw Tarot card and note your meter starting position",
+      "2": "Work with corresponding angel-demon pair for that card",
+      "3": "Make choices in meditation/practice that shift the meter toward balance",
+      "4": "Journal insights about integration of opposites",
+      "5": "Track progress toward Codex completion"
+    },
+    
+    "healing_applications": {
+      "trauma_work": "Use balanced angel-demon pairs to process difficult emotions safely",
+      "shadow_integration": "Work with demon aspects to reclaim disowned parts",
+      "spiritual_development": "Use angel aspects for inspiration and guidance", 
+      "relationship_healing": "Apply angel-demon balance to partnership dynamics",
+      "creative_work": "Balance inspiration (angel) with skill/craft (demon)"
+    }
+  }
+}
