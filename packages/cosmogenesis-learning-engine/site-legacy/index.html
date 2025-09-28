@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Cosmogenesis Learning Engine</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="ND-safe atelier index for the Cosmogenesis Learning Engine.">
+  <link rel="stylesheet" href="atelier.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="atelier-nav">
+    <a href="#welcome" class="marque-logo">COSMOGENESIS</a>
+    <ul class="nav-collection">
+      <li><a href="#welcome">Welcome</a></li>
+      <li><a href="#arcana">Living Arcana</a></li>
+      <li><a href="#node-system">Node System</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#atelier">Atelier</a></li>
+    </ul>
+    <button id="calmToggle" aria-pressed="false" class="btn-couture">Calm Mode</button>
+  </nav>
+
+  <main id="main">
+    <section class="hero-vesica" id="welcome">
+      <div class="vesica">
+        <div class="circle left"></div>
+        <div class="circle right"></div>
+        <div class="mandorla"></div>
+      </div>
+      <div class="hero-copy">
+        <h1>COSMOGENESIS</h1>
+        <p>Cathedral of Circuits — a living grimoire of sacred geometry &amp; arcana.</p>
+        <div class="cta">
+          <a class="btn-couture primary" href="#arcana">Enter the Arcana</a>
+          <a class="btn-couture" href="#node-system">Explore Nodes</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="arcana" class="flow-band theme--tiferet arcana--magician">
+      <div class="room">
+        <h2>Living Arcana</h2>
+        <p>22 paths, 56 trials — a full 78-card journey through the Double Tree.</p>
+        <ul class="soft-list">
+          <li>Temple rooms colored by path &amp; sephirah</li>
+          <li>Hebrew letters &amp; correspondences rendered in-room</li>
+          <li>Calm-Mode animations for breathing mandalas</li>
+        </ul>
+        <div class="cta">
+          <a class="btn-couture primary" href="/engine/arcana.html">Open the Magician</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="node-system" class="flow-band theme--yesod arcana--hierophant">
+      <div class="room">
+        <h2>Node System Laboratory</h2>
+        <p>Layered geometry studio calibrated to numerology constants {3, 7, 9, 11, 22, 33, 99, 144}. No motion is required; calm mode freezes every pulse.</p>
+        <ul class="soft-list">
+          <li>Phyllotaxis nodes aligned to aurora gate schematics</li>
+          <li>Static mandala canvases ready for Tree-of-Life overlays</li>
+          <li>Offline protocols honouring trauma-informed breathing cadences</li>
+        </ul>
+        <div class="cta">
+          <a class="btn-couture" href="../docs/aurora_gate_node_00.html">Read the Node Dossier</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="flow-band theme--hod arcana--highpriestess">
+      <div class="room">
+        <h2>Research Index</h2>
+        <p>Primary scrolls and datasets for provenance-first study.</p>
+        <ul class="soft-list">
+          <li><a href="scrolls/index.html">Scrolls — provenance excerpts</a></li>
+          <li><a href="about/index.html">About the Cosmogenesis Learning Engine</a></li>
+          <li><a href="../docs/aurora_gate_node_00.html">Aurora Gate node dossier (docs)</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="atelier" class="flow-band theme--netzach arcana--lovers">
+      <div class="room">
+        <h2>Atelier Harmonics</h2>
+        <p>Colour-frequency chamber and field notes. Everything remains static until you interact.</p>
+        <ul class="soft-list">
+          <li>432 Hz baseline tuning matched to palette correspondences</li>
+          <li>Sephirothic gradients rendered as calm breathing fields</li>
+          <li>Commissions and research tracked through open notebooks</li>
+        </ul>
+        <div class="cta">
+          <a class="btn-couture" href="../docs/ateliers/atelier_constellation.html">Constellation Notes</a>
+          <a class="btn-couture" href="https://github.com/Rebecca-Respawn/cosmogenesis-learning-engine" rel="noopener noreferrer">Source Library</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="maison-footer">
+    <div class="footer-links">
+      <a href="#arcana">Living Arcana</a>
+      <a href="#node-system">Node System Docs</a>
+      <a href="#research">Research</a>
+      <a href="#atelier">Atelier</a>
+    </div>
+    <p class="copyright">&copy; MMXXV — Atelier of Sacred Geometry &amp; Consciousness Research</p>
+  </footer>
+
+  <script type="module">
+    const prefersReduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) {
+      document.documentElement.classList.add('reduced-motion');
+      const toggle = document.getElementById('calmToggle');
+      toggle?.setAttribute('aria-pressed', 'true');
+    }
+    document.getElementById('calmToggle')?.addEventListener('click', (event) => {
+      const on = document.documentElement.classList.toggle('reduced-motion');
+      event.currentTarget.setAttribute('aria-pressed', String(on));
+    });
+  </script>
+</body>
+</html>

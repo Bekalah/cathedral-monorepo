@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Cosmogenesis Learning Engine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+  </style>
+</head>
+<body>
+  <h1>Cosmogenesis Learning Engine</h1>
+  <p>This minimal shell loads room data and prepares modules for immersive experiences.</p>
+  <div id="room-list">Loading rooms…</div>
+  <script>
+    async function loadRooms() {
+      try {
+        const res = await fetch('data/rooms.json');
+        const rooms = await res.json();
+        const container = document.getElementById('room-list');
+        container.innerHTML = '';
+        rooms.forEach(r => {
+          const item = document.createElement('div');
+          item.textContent = r.name;
+          container.appendChild(item);
+        });
+      } catch (err) {
+        console.error('Failed to load rooms', err);
+      }
+    }
+    loadRooms();
+  </script>
+</body>
+</html> 
+<a href="chapels/tesseract.html">Tesseract (Chariot)</a> ·
+<a href="chapels/grand-stand.html">Grand Stand / Chariot Hub</a> ·
