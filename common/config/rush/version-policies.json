@@ -1,0 +1,8 @@
+[
+  {
+    "definitionName": "lockStepVersion",
+    "policyName": "cathedral",
+    "version": "1.0.0",
+    "nextBump": "patch"
+  }
+]

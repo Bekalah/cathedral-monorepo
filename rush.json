@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.135.0",
+  "pnpmVersion": "8.15.3",
+  "nodeSupportedVersionRange": ">=18.0.0",
+  "projectFolderMaxDepth": 3,
+  "projects": [
+    {
+      "packageName": "@cathedral/portal",
+      "projectFolder": "apps/portal"
+    },
+    {
+      "packageName": "@cathedral/codex-portal", 
+      "projectFolder": "apps/codex-portal"
+    },
+    {
+      "packageName": "@cathedral/stone-cathedral",
+      "projectFolder": "apps/stone-cathedral"
+    },
+    {
+      "packageName": "@cathedral/circuitum99",
+      "projectFolder": "apps/circuitum99"
+    },
+    {
+      "packageName": "@cathedral/cosmogenesis-learning-engine",
+      "projectFolder": "packages/cosmogenesis-learning-engine"
+    },
+    {
+      "packageName": "@cathedral/tesseract-bridge",
+      "projectFolder": "packages/tesseract-bridge"
+    },
+    {
+      "packageName": "@cathedral/atelier-protocol",
+      "projectFolder": "packages/atelier-protocol"
+    },
+    {
+      "packageName": "@cathedral/lineage-vaults",
+      "projectFolder": "packages/lineage-vaults"
+    },
+    {
+      "packageName": "@cathedral/core-engines",
+      "projectFolder": "packages/core-engines"
+    },
+    {
+      "packageName": "@cathedral/codex-engines",
+      "projectFolder": "services/codex-engines"
+    },
+    {
+      "packageName": "@cathedral/ambient-engine",
+      "projectFolder": "services/ambient-engine"
+    },
+    {
+      "packageName": "@cathedral/reiki-bridge",
+      "projectFolder": "services/reiki-bridge"
+    }
+  ]
+}
