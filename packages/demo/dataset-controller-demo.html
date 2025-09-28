@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cathedral Dataset Controller - Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            color: #e6f3ff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .cathedral-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .cathedral-header h1 {
+            font-size: 2.5em;
+            background: linear-gradient(45deg, #ffd700, #ffeb3b, #ffc107);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .control-panel {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section h2 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toggle-group {
+            margin-bottom: 15px;
+        }
+
+        .toggle-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .toggle-item.active {
+            background: rgba(76, 175, 80, 0.2);
+            border-left: 3px solid #4CAF50;
+        }
+
+        .toggle-switch {
+            width: 50px;
+            height: 25px;
+            background: #333;
+            border-radius: 25px;
+            cursor: pointer;
+            position: relative;
+            transition: background 0.3s ease;
+        }
+
+        .toggle-switch.active {
+            background: #4CAF50;
+        }
+
+        .toggle-switch::after {
+            content: '';
+            width: 21px;
+            height: 21px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-switch.active::after {
+            transform: translateX(25px);
+        }
+
+        .mode-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .mode-btn {
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            color: #e6f3ff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .mode-btn:hover, .mode-btn.active {
+            background: #ffd700;
+            color: #1a1a2e;
+            transform: translateY(-2px);
+        }
+
+        .intensity-slider {
+            width: 100%;
+            -webkit-appearance: none;
+            height: 6px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            outline: none;
+            margin: 10px 0;
+        }
+
+        .intensity-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #ffd700;
+            cursor: pointer;
+        }
+
+        .status-display {
+            grid-column: span 2;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .emergency-btn {
+            background: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .emergency-btn:hover {
+            background: #d32f2f;
+        }
+
+        .demo-section {
+            grid-column: span 2;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .demo-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .demo-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .output {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            max-height: 200px;
+            overflow-y: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cathedral-header">
+        <h1>🏛️ Cathedral Dataset Controller</h1>
+        <p>✨ Customize your healing journey through the sacred architecture of data ✨</p>
+    </div>
+
+    <div class="control-panel">
+        <!-- Mode Selection -->
+        <div class="section">
+            <h2>🎛️ Experience Modes</h2>
+            <div class="mode-buttons">
+                <div class="mode-btn" data-mode="beginner">🌱 Beginner</div>
+                <div class="mode-btn" data-mode="intermediate">🌿 Intermediate</div>
+                <div class="mode-btn" data-mode="advanced">🌳 Advanced</div>
+                <div class="mode-btn" data-mode="custom">⚡ Custom</div>
+            </div>
+
+            <h3>🔥 Intensity Level</h3>
+            <input type="range" class="intensity-slider" min="0" max="3" value="1" id="intensitySlider">
+            <div style="display: flex; justify-content: space-between; font-size: 0.8em; margin-top: 5px;">
+                <span>Gentle</span>
+                <span>Moderate</span>
+                <span>Deep</span>
+                <span>Advanced</span>
+            </div>
+
+            <div style="margin-top: 15px;">
+                <button class="emergency-btn" onclick="emergencyMode()">🚨 Emergency Gentle Mode</button>
+            </div>
+        </div>
+
+        <!-- Dataset Toggles -->
+        <div class="section">
+            <h2>📊 Active Datasets</h2>
+            <div class="toggle-group" id="toggleGroup">
+                <!-- Toggles will be dynamically generated -->
+            </div>
+        </div>
+
+        <!-- Demo Functions -->
+        <div class="demo-section">
+            <h2>🧪 Test the System</h2>
+            <div>
+                <button class="demo-btn" onclick="testNodeRetrieval()">Get Node #99</button>
+                <button class="demo-btn" onclick="testHealingSearch()">Search: Anxiety Healing</button>
+                <button class="demo-btn" onclick="testDailyFocus()">Get Daily Focus</button>
+                <button class="demo-btn" onclick="testCorrelations()">Show Correlations</button>
+                <button class="demo-btn" onclick="showStatus()">System Status</button>
+            </div>
+            <div class="output" id="output">
+Welcome to the Cathedral Dataset Controller!
+
+Try clicking the demo buttons above to see how the toggle system works.
+Your active datasets will filter what information is available.
+
+🏛️ Current status: Loading...
+            </div>
+        </div>
+
+        <!-- Status Display -->
+        <div class="status-display">
+            <h2>📈 System Status</h2>
+            <div id="statusInfo">
+                <p>🔄 Initializing Cathedral Dataset Controller...</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        // Simple mock implementation for demo purposes
+        // In a real app, this would import the actual CathedralDataController
+        
+        class DemoController {
+            constructor() {
+                this.toggles = new Map([
+                    ['codex_nodes', true],
+                    ['angels_72', true], 
+                    ['alchemy_operations', true],
+                    ['mystery_house', true],
+                    ['portal_network', true],
+                    ['crystal_frequencies', true],
+                    ['chakra_system', true],
+                    ['sacred_geometry', true],
+                    ['tarot_integration', true],
+                    ['reiki_symbols', true],
+                    ['daemon_guardians', false],
+                    ['tara_overlays', true],
+                    ['trauma_safeguards', true],
+                    ['grounding_techniques', true],
+                    ['emergency_exits', true]
+                ]);
+                this.mode = 'intermediate';
+                this.intensity = 1;
+                
+                this.initUI();
+            }
+
+            initUI() {
+                this.renderToggles();
+                this.setupEventListeners();
+                this.updateStatus();
+            }
+
+            renderToggles() {
+                const container = document.getElementById('toggleGroup');
+                container.innerHTML = '';
+
+                const descriptions = {
+                    'codex_nodes': '🔢 Codex 144:99 Healing Nodes',
+                    'angels_72': '👼 72 Angels Sacred Guidance', 
+                    'alchemy_operations': '⚗️ Emotional Alchemy Processes',
+                    'mystery_house': '🏠 Magical Mystery House',
+                    'portal_network': '🌀 Omniversal Portal Network',
+                    'crystal_frequencies': '💎 Crystal Healing Frequencies',
+                    'chakra_system': '🌈 Chakra Balancing System',
+                    'sacred_geometry': '📐 Sacred Geometry Patterns',
+                    'tarot_integration': '🔮 Tarot Wisdom Integration',
+                    'reiki_symbols': '✋ Reiki Healing Symbols',
+                    'daemon_guardians': '👹 Shadow Work Guardians',
+                    'tara_overlays': '🌸 Tara Compassion Overlays',
+                    'trauma_safeguards': '🛡️ Trauma Safety System',
+                    'grounding_techniques': '🌱 Grounding Practices',
+                    'emergency_exits': '🚪 Emergency Exit Protocols'
+                };
+
+                this.toggles.forEach((isActive, name) => {
+                    const item = document.createElement('div');
+                    item.className = `toggle-item ${isActive ? 'active' : ''}`;
+                    item.innerHTML = `
+                        <span>${descriptions[name] || name}</span>
+                        <div class="toggle-switch ${isActive ? 'active' : ''}" data-toggle="${name}"></div>
+                    `;
+                    container.appendChild(item);
+                });
+            }
+
+            setupEventListeners() {
+                // Toggle switches
+                document.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('toggle-switch')) {
+                        const toggleName = e.target.dataset.toggle;
+                        this.toggleDataset(toggleName);
+                    }
+                });
+
+                // Mode buttons
+                document.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('mode-btn')) {
+                        const mode = e.target.dataset.mode;
+                        this.setMode(mode);
+                    }
+                });
+
+                // Intensity slider
+                document.getElementById('intensitySlider').addEventListener('input', (e) => {
+                    this.intensity = parseInt(e.target.value);
+                    this.updateStatus();
+                });
+            }
+
+            toggleDataset(name) {
+                const current = this.toggles.get(name);
+                const newValue = !current;
+                
+                // Safety check
+                if (['trauma_safeguards', 'grounding_techniques', 'emergency_exits'].includes(name) && !newValue) {
+                    this.addOutput('⚠️ Cannot disable safety systems!');
+                    return;
+                }
+                
+                this.toggles.set(name, newValue);
+                this.addOutput(`${newValue ? '✅' : '❌'} ${name}: ${newValue ? 'activated' : 'deactivated'}`);
+                this.renderToggles();
+                this.updateStatus();
+            }
+
+            setMode(mode) {
+                this.mode = mode;
+                
+                // Update mode button states
+                document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelector(`[data-mode="${mode}"]`).classList.add('active');
+
+                const modeConfigs = {
+                    'beginner': {
+                        active: ['codex_nodes', 'angels_72', 'crystal_frequencies', 'mystery_house', 'trauma_safeguards', 'grounding_techniques', 'emergency_exits'],
+                        intensity: 0
+                    },
+                    'intermediate': {
+                        active: ['codex_nodes', 'angels_72', 'alchemy_operations', 'crystal_frequencies', 'chakra_system', 'mystery_house', 'portal_network', 'sacred_geometry', 'trauma_safeguards', 'grounding_techniques', 'emergency_exits'],
+                        intensity: 1
+                    },
+                    'advanced': {
+                        active: Array.from(this.toggles.keys()),
+                        intensity: 2
+                    }
+                };
+
+                if (modeConfigs[mode]) {
+                    const config = modeConfigs[mode];
+                    
+                    // Reset all toggles
+                    this.toggles.forEach((value, key) => {
+                        this.toggles.set(key, config.active.includes(key));
+                    });
+                    
+                    this.intensity = config.intensity;
+                    document.getElementById('intensitySlider').value = this.intensity;
+                    
+                    this.renderToggles();
+                    this.addOutput(`🎛️ Mode set to: ${mode}`);
+                    this.updateStatus();
+                }
+            }
+
+            addOutput(message) {
+                const output = document.getElementById('output');
+                const timestamp = new Date().toLocaleTimeString();
+                output.textContent += `\n[${timestamp}] ${message}`;
+                output.scrollTop = output.scrollHeight;
+            }
+
+            updateStatus() {
+                const activeCount = Array.from(this.toggles.values()).filter(Boolean).length;
+                const totalCount = this.toggles.size;
+                const intensityLabels = ['Gentle', 'Moderate', 'Deep', 'Advanced'];
+                
+                document.getElementById('statusInfo').innerHTML = `
+                    <p>🎛️ <strong>Mode:</strong> ${this.mode}</p>
+                    <p>🔥 <strong>Intensity:</strong> ${intensityLabels[this.intensity]}</p>
+                    <p>📊 <strong>Active Datasets:</strong> ${activeCount}/${totalCount}</p>
+                    <p>🛡️ <strong>Safety Systems:</strong> Always Active</p>
+                    <p>⏰ <strong>Last Update:</strong> ${new Date().toLocaleTimeString()}</p>
+                `;
+            }
+        }
+
+        // Demo functions
+        window.testNodeRetrieval = () => {
+            const demo = window.demoController;
+            if (demo.toggles.get('codex_nodes')) {
+                demo.addOutput('🔢 Retrieved Node #99: "Gateway of Transcendence"');
+                demo.addOutput('   🎵 Frequency: 999Hz');
+                demo.addOutput('   🧬 Element: Spirit');
+                demo.addOutput('   📚 Teaching: "Unity consciousness through divine frequency"');
+                
+                if (demo.toggles.get('angels_72')) {
+                    demo.addOutput('   👼 Connected Angel: Mumiah (Endings & New Beginnings)');
+                }
+                if (demo.toggles.get('crystal_frequencies')) {
+                    demo.addOutput('   💎 Resonant Crystal: Clear Quartz (963Hz)');
+                }
+            } else {
+                demo.addOutput('❌ Codex nodes dataset is disabled');
+            }
+        };
+
+        window.testHealingSearch = () => {
+            const demo = window.demoController;
+            demo.addOutput('🔍 Searching for anxiety healing...');
+            
+            const results = [];
+            if (demo.toggles.get('angels_72')) results.push('👼 Angel Iezalel (Comfort & Peace)');
+            if (demo.toggles.get('crystal_frequencies')) results.push('💎 Amethyst (852Hz - Calming)');
+            if (demo.toggles.get('alchemy_operations')) results.push('⚗️ Separation Process (Releasing Fear)');
+            if (demo.toggles.get('codex_nodes')) results.push('🔢 Node #21 (Anxiety to Peace)');
+            
+            if (results.length > 0) {
+                demo.addOutput(`✨ Found ${results.length} healing resources:`);
+                results.forEach(result => demo.addOutput(`   ${result}`));
+            } else {
+                demo.addOutput('❌ No healing datasets active');
+            }
+        };
+
+        window.testDailyFocus = () => {
+            const demo = window.demoController;
+            const today = new Date();
+            const nodeId = (Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000) % 144) + 1;
+            
+            demo.addOutput(`🗓️ Today's Focus: Node #${nodeId}`);
+            
+            if (demo.toggles.get('codex_nodes')) {
+                demo.addOutput('   🎯 Primary Practice: Heart Coherence Meditation');
+            }
+            if (demo.toggles.get('angels_72')) {
+                demo.addOutput('   👼 Supporting Angel: Hariel (Inner Vision)');
+            }
+            if (demo.toggles.get('crystal_frequencies')) {
+                demo.addOutput('   💎 Crystal: Rose Quartz for heart healing');
+            }
+        };
+
+        window.testCorrelations = () => {
+            const demo = window.demoController;
+            demo.addOutput('🕸️ Showing correlations for Node #12...');
+            
+            let correlations = 0;
+            if (demo.toggles.get('angels_72')) {
+                demo.addOutput('   👼 Angels: Hahaiah, Yezalel');
+                correlations++;
+            }
+            if (demo.toggles.get('alchemy_operations')) {
+                demo.addOutput('   ⚗️ Alchemy: Dissolution (Emotional Release)');
+                correlations++;
+            }
+            if (demo.toggles.get('sacred_geometry')) {
+                demo.addOutput('   📐 Geometry: Vesica Piscis (Union of Opposites)');
+                correlations++;
+            }
+            if (demo.toggles.get('tarot_integration')) {
+                demo.addOutput('   🔮 Tarot: The Hanged Man (Surrender)');
+                correlations++;
+            }
+            
+            demo.addOutput(`✨ Total correlations found: ${correlations}`);
+        };
+
+        window.showStatus = () => {
+            const demo = window.demoController;
+            const activeDatasets = Array.from(demo.toggles.entries())
+                .filter(([name, active]) => active)
+                .map(([name]) => name);
+                
+            demo.addOutput('📊 System Status Report:');
+            demo.addOutput(`   🎛️ Mode: ${demo.mode}`);
+            demo.addOutput(`   🔥 Intensity: ${['Gentle', 'Moderate', 'Deep', 'Advanced'][demo.intensity]}`);
+            demo.addOutput(`   📦 Active Datasets: ${activeDatasets.length}`);
+            demo.addOutput('   🛡️ Safety: All systems operational');
+            demo.addOutput('   🌟 Ready for healing work!');
+        };
+
+        window.emergencyMode = () => {
+            const demo = window.demoController;
+            demo.addOutput('🚨 EMERGENCY GENTLE MODE ACTIVATED');
+            
+            // Disable challenging datasets
+            ['daemon_guardians', 'shadow_work_elements'].forEach(dataset => {
+                demo.toggles.set(dataset, false);
+            });
+            
+            // Enable gentle datasets
+            ['angels_72', 'crystal_frequencies', 'reiki_symbols'].forEach(dataset => {
+                demo.toggles.set(dataset, true);
+            });
+            
+            demo.intensity = 0;
+            document.getElementById('intensitySlider').value = 0;
+            demo.mode = 'emergency';
+            
+            demo.renderToggles();
+            demo.updateStatus();
+            demo.addOutput('🌱 Gentle healing mode ready');
+            demo.addOutput('💚 You are safe. Take deep breaths.');
+        };
+
+        // Initialize the demo
+        window.demoController = new DemoController();
+        
+        // Welcome message
+        setTimeout(() => {
+            window.demoController.addOutput('🏛️ Cathedral Dataset Controller initialized!');
+            window.demoController.addOutput('✨ Toggle datasets on/off to customize your healing experience');
+            window.demoController.addOutput('🎛️ Try different modes and test the demo functions');
+        }, 500);
+    </script>
+</body>
+</html>

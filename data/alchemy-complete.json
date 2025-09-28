@@ -1,0 +1,101 @@
+{
+  "version": "2.0",
+  "elements": [
+    { "id": "Fire",  "glyph": "🜂", "planet": "Sun",     "metal": "Gold",    "color": "#e0b84f", "solfeggio": 741, "stylepack": "alchemy_quadrivium" },
+    { "id": "Water", "glyph": "🜄", "planet": "Moon",    "metal": "Silver",  "color": "#bfc6d1", "solfeggio": 639, "stylepack": "shekhinah_marian"   },
+    { "id": "Air",   "glyph": "🜁", "planet": "Mercury", "metal": "Mercury", "color": "#a8d5e5", "solfeggio": 528, "stylepack": "enochian_astral"    },
+    { "id": "Earth", "glyph": "🜃", "planet": "Saturn",  "metal": "Lead",    "color": "#556b57", "solfeggio": 396, "stylepack": "druidic_greenman"   },
+    { "id": "Aether","glyph": "🜍", "planet": "Jupiter", "metal": "Tin",     "color": "#b9a6ff", "solfeggio": 852, "stylepack": "hilma_spiral"        }
+  ],
+  "operations": [
+    { "id":"calcination",  "emoji":"🔥", "from":"Fire",  "to":"Earth",  "curve":"expoOut",  "notes":"Reduce to ash; brighten highlights." },
+    { "id":"dissolution",  "emoji":"💧", "from":"Earth", "to":"Water",  "curve":"sine",     "notes":"Ash into water; soften edges." },
+    { "id":"separation",   "emoji":"🔪", "from":"Water", "to":"Air",    "curve":"linear",   "notes":"Clarify components; outline." },
+    { "id":"conjunction",  "emoji":"⚭", "from":"Air",   "to":"Fire",   "curve":"easeInOut","notes":"Sacred marriage; iridescence." },
+    { "id":"fermentation", "emoji":"🫧", "from":"Fire",  "to":"Water",  "curve":"bounce",   "notes":"Life returns; spectrum noise." },
+    { "id":"distillation", "emoji":"🧪", "from":"Water", "to":"Air",    "curve":"expoIn",   "notes":"Refine; sharpen; rise." },
+    { "id":"coagulation",  "emoji":"🜔", "from":"Air",   "to":"Aether", "curve":"easeOut",  "notes":"Unify layers; aureole." }
+  ],
+  "emotional_alchemy": {
+    "fear_to_courage": {
+      "operation": "calcination",
+      "element_path": "Earth → Fire", 
+      "frequency": "741Hz",
+      "crystal": "Tiger's Eye",
+      "angel": "Vehuiah",
+      "process": "Burn through fear with divine will",
+      "affirmation": "I transform fear into sacred courage",
+      "visualization": "Golden fire dissolving shadows into light"
+    },
+    "anger_to_compassion": {
+      "operation": "dissolution",
+      "element_path": "Fire → Water",
+      "frequency": "639Hz", 
+      "crystal": "Rose Quartz",
+      "angel": "Leuviah",
+      "process": "Dissolve anger in the waters of compassion",
+      "affirmation": "My anger becomes fierce compassion for all beings",
+      "visualization": "Red flames cooling into pink healing waters"
+    },
+    "sadness_to_wisdom": {
+      "operation": "separation",
+      "element_path": "Water → Air",
+      "frequency": "528Hz",
+      "crystal": "Amethyst", 
+      "angel": "Iezalel",
+      "process": "Separate wisdom from suffering",
+      "affirmation": "My tears become pearls of wisdom",
+      "visualization": "Blue tears rising as golden understanding"
+    },
+    "anxiety_to_trust": {
+      "operation": "conjunction",
+      "element_path": "Air → Fire",
+      "frequency": "741Hz",
+      "crystal": "Citrine",
+      "angel": "Haaiah",
+      "process": "Unite scattered energy with divine trust",
+      "affirmation": "I breathe in chaos and exhale divine order",
+      "visualization": "Scattered winds gathering into a golden sun"
+    },
+    "shame_to_self_love": {
+      "operation": "fermentation",
+      "element_path": "Fire → Water",
+      "frequency": "639Hz",
+      "crystal": "Rhodonite",
+      "angel": "Aniel", 
+      "process": "Allow new life to emerge from the compost of shame",
+      "affirmation": "From my deepest wounds, my greatest gifts emerge",
+      "visualization": "Dead soil birthing beautiful flowers"
+    },
+    "confusion_to_clarity": {
+      "operation": "distillation", 
+      "element_path": "Water → Air",
+      "frequency": "528Hz",
+      "crystal": "Clear Quartz",
+      "angel": "Iezalel",
+      "process": "Refine understanding until only truth remains",
+      "affirmation": "I distill confusion into crystal clarity",
+      "visualization": "Muddy water becoming pure, clear light"
+    },
+    "fragmentation_to_wholeness": {
+      "operation": "coagulation",
+      "element_path": "Air → Aether",
+      "frequency": "852Hz", 
+      "crystal": "Moldavite",
+      "angel": "Mumiah",
+      "process": "Unite all aspects into divine wholeness",
+      "affirmation": "All my parts come together in perfect harmony",
+      "visualization": "Scattered puzzle pieces forming a mandala of light"
+    }
+  },
+  "healing_correspondences": {
+    "anxiety": ["Air", "separation", "528Hz", "Clear Quartz", "Iezalel"],
+    "depression": ["Water", "fermentation", "639Hz", "Rose Quartz", "Leuviah"],
+    "anger": ["Fire", "dissolution", "639Hz", "Amethyst", "Rehael"],
+    "trauma": ["Earth", "calcination", "396Hz", "Black Tourmaline", "Achaiah"],
+    "addiction": ["All Elements", "full_cycle", "852Hz", "Fluorite", "Mumiah"],
+    "grief": ["Water", "distillation", "639Hz", "Apache Tear", "Nelchael"],
+    "fear": ["Earth → Fire", "calcination", "741Hz", "Tiger's Eye", "Vehuiah"],
+    "shame": ["All Elements", "fermentation", "639Hz", "Rhodonite", "Aniel"]
+  }
+}

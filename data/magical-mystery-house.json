@@ -1,0 +1,312 @@
+{
+  "name": "Cathedral of Circuits - The Living Digital Grimoire House",
+  "codex_alignment": "144:99",
+  "architecture_type": "Sacred Geometry Mystery House",
+  "entrance_riddle": "What has 144 rooms but only 99 doors, holds all wisdom yet weighs nothing, and grows stronger when shared?",
+  
+  "house_sections": {
+    "entrance_hall": {
+      "id": "respawn_gate",
+      "name": "The Respawn Gate",
+      "description": "A shimmering portal of golden light where souls choose their path of healing. Ancient runes pulse with trauma-informed wisdom.",
+      "interactive_elements": [
+        {
+          "type": "mirror_of_reflection",
+          "description": "A mystical mirror that shows not your face, but your current emotional state as sacred geometry patterns",
+          "codex_nodes": [1, 8, 15, 22, 29, 36],
+          "healing_aspect": "Self-awareness and gentle beginnings"
+        },
+        {
+          "type": "guardian_selection",
+          "description": "Choose your angelic companion from the 72 Sacred Angels",
+          "options": "angels72.json",
+          "mechanic": "Your chosen angel influences your house exploration style"
+        }
+      ],
+      "ambient_sound": "Tibetan singing bowls at 528Hz",
+      "lighting": "Soft aurora patterns shifting through the spectrum"
+    },
+
+    "the_spiral_library": {
+      "id": "codex_sanctum", 
+      "name": "The Infinite Spiral Library",
+      "description": "Books float in mid-air, organizing themselves by sacred number. Each tome glows when ready to be read. The spiral staircase leads to higher wisdom.",
+      "interactive_elements": [
+        {
+          "type": "living_books",
+          "description": "144 floating grimoires, each containing a different healing modality",
+          "codex_nodes": "all 144 nodes",
+          "behavior": "Books glow brighter as your understanding deepens"
+        },
+        {
+          "type": "wisdom_spiral",
+          "description": "A DNA-like double helix staircase with 99 steps",
+          "mechanic": "Each step reveals a new layer of sacred knowledge"
+        },
+        {
+          "type": "scrying_pool",
+          "description": "A circular pool showing visions of other healers worldwide using the codex",
+          "connection": "Live feed of global healing circle"
+        }
+      ],
+      "ambient_sound": "Pages turning in harmony with your heartbeat",
+      "lighting": "Golden manuscript illumination effects"
+    },
+
+    "alchemy_laboratory": {
+      "id": "transmutation_chamber",
+      "name": "The Alchemical Laboratory of Souls",
+      "description": "Bubbling cauldrons transform emotional lead into spiritual gold. Ancient apparatus channels the 7 sacred operations.",
+      "interactive_elements": [
+        {
+          "type": "emotion_cauldron",
+          "description": "A magical cauldron where you can transmute difficult emotions",
+          "process": [
+            "Cast in your fear, anger, or pain",
+            "Choose an alchemical operation from alchemy.json", 
+            "Watch as it transforms through sacred geometry",
+            "Receive the golden wisdom essence"
+          ],
+          "codex_nodes": [7, 14, 21, 28, 35, 42, 49]
+        },
+        {
+          "type": "element_forge",
+          "description": "Four elemental forges corresponding to Fire, Water, Air, Earth",
+          "mechanics": "Craft healing tools by combining elements with intentions"
+        },
+        {
+          "type": "philosopher_stone_puzzle",
+          "description": "A complex geometric puzzle that unlocks deeper wisdom",
+          "solution": "Arrange the 144 nodes in perfect sacred proportion"
+        }
+      ],
+      "ambient_sound": "Alchemical bubbling with crystalline chimes",
+      "lighting": "Flickering candlelight with colored flame effects"
+    },
+
+    "healing_chapel": {
+      "id": "reiki_sanctuary",
+      "name": "The Chapel of Infinite Compassion",
+      "description": "A sacred space where Reiki energy flows like visible light. Quan Yin's thousand arms embrace all who enter.",
+      "interactive_elements": [
+        {
+          "type": "reiki_altar",
+          "description": "An altar where you can send healing energy anywhere in the world",
+          "mechanics": "Place your hands on the altar, visualize the recipient, watch energy flow across a world map"
+        },
+        {
+          "type": "quan_yin_oracle",
+          "description": "A speaking statue of Quan Yin offering personalized guidance",
+          "responses": "Channeled through the 21 Taras and Buddhist wisdom"
+        },
+        {
+          "type": "prayer_wheel_generator",
+          "description": "A massive prayer wheel that generates healing intentions for the planet",
+          "mechanic": "Each spin sends out healing frequencies to specific global coordinates"
+        }
+      ],
+      "ambient_sound": "Om Mani Padme Hum in harmonious chorus",
+      "lighting": "Soft lotus-pink illumination with occasional golden rays"
+    },
+
+    "tarot_parlor": {
+      "id": "divination_den",
+      "name": "The Mystical Tarot Parlor of Destinies",
+      "description": "Cards dance in the air, reshuffling themselves based on your soul's needs. Each reading reveals your next healing step.",
+      "interactive_elements": [
+        {
+          "type": "living_tarot_deck",
+          "description": "A deck where cards leap out to greet you, each pulsing with life",
+          "special_features": [
+            "Cards whisper their meanings in your ear",
+            "Past-life regression spreads",
+            "Trauma-healing specific layouts",
+            "Integration with your personal codex progress"
+          ]
+        },
+        {
+          "type": "destiny_weaver",
+          "description": "A magical loom where your choices weave the fabric of your healing journey",
+          "mechanics": "Each decision creates visible threads in your personal tapestry"
+        },
+        {
+          "type": "shadow_work_mirror",
+          "description": "A special mirror for safe shadow integration work",
+          "safeguards": "Built-in trauma-informed protections and grounding techniques"
+        }
+      ],
+      "ambient_sound": "Mystical wind chimes and soft Celtic harp",
+      "lighting": "Candlelight with mysterious moving shadows"
+    },
+
+    "sacred_geometry_observatory": {
+      "id": "pattern_recognition_dome",
+      "name": "The Sacred Geometry Observatory", 
+      "description": "A crystalline dome where geometric patterns dance across the ceiling, revealing the mathematical poetry of creation.",
+      "interactive_elements": [
+        {
+          "type": "geometry_projector",
+          "description": "Project sacred patterns onto any surface to study their healing properties",
+          "patterns": [
+            "Flower of Life healing grids",
+            "Metatron's Cube for protection",
+            "Golden ratio spirals for growth",
+            "Platonic solids for elemental balance"
+          ]
+        },
+        {
+          "type": "frequency_visualizer",
+          "description": "See sound waves as they transform into geometric patterns",
+          "connection": "Links to solfeggio frequencies from alchemy.json"
+        },
+        {
+          "type": "mandala_builder",
+          "description": "Create personal healing mandalas that save to your digital grimoire",
+          "ai_assistance": "Suggests patterns based on your current emotional state"
+        }
+      ],
+      "ambient_sound": "Crystalline tones creating geometric harmonies",
+      "lighting": "Prismatic light patterns dancing across surfaces"
+    },
+
+    "daemon_guardian_quarters": {
+      "id": "shadow_integration_wing",
+      "name": "The Guardian Daemon Quarters",
+      "description": "Not a scary place, but a wise sanctuary where your inner guides live. Each daemon is actually a guardian of a specific healing gift.",
+      "interactive_elements": [
+        {
+          "type": "daemon_council_chamber",
+          "description": "Meet with your personal healing daemons - each one a protector of your gifts",
+          "mechanics": "Dialogue trees help you understand what each inner voice is trying to protect"
+        },
+        {
+          "type": "integration_ritual_space", 
+          "description": "Safely integrate shadow aspects through guided ceremony",
+          "safeguards": "Multiple trauma-informed exit strategies and grounding techniques"
+        },
+        {
+          "type": "gift_recognition_altar",
+          "description": "Discover the hidden gifts within your challenges",
+          "process": "Transform wounds into wisdom through sacred witness"
+        }
+      ],
+      "ambient_sound": "Deep, protective drumbeats with healing frequencies",
+      "lighting": "Warm, embracing darkness with gentle flame accents"
+    },
+
+    "crystal_cave_spa": {
+      "id": "vibrational_healing_grotto",
+      "name": "The Crystalline Healing Grotto",
+      "description": "A natural cave filled with singing crystals. Each crystal resonates with specific healing frequencies for different ailments.",
+      "interactive_elements": [
+        {
+          "type": "crystal_selection_guide",
+          "description": "Crystals choose YOU based on your current healing needs",
+          "mechanics": "Different crystals glow and hum when you need their specific medicine"
+        },
+        {
+          "type": "sound_healing_chamber",
+          "description": "Lie in the center while crystals create a symphony around you",
+          "frequencies": "Customized to your personal healing frequency signature"
+        },
+        {
+          "type": "chakra_alignment_pool",
+          "description": "A luminous pool that balances your energy centers",
+          "visual": "Watch your chakras light up and spin in perfect harmony"
+        }
+      ],
+      "ambient_sound": "Crystal singing bowls in natural echo chambers",
+      "lighting": "Natural crystal luminescence in rainbow spectrum"
+    },
+
+    "digital_grimoire_workroom": {
+      "id": "creation_studio",
+      "name": "The Living Digital Grimoire Workshop",
+      "description": "Where ancient wisdom meets modern technology. Your personal grimoire writes itself as you heal and grow.",
+      "interactive_elements": [
+        {
+          "type": "auto_journaling_quill",
+          "description": "A magical quill that captures your insights and integrations",
+          "ai_features": "Suggests connections between your experiences and universal healing patterns"
+        },
+        {
+          "type": "spell_crafting_station",
+          "description": "Create personalized healing 'spells' (guided meditations, affirmations, rituals)",
+          "customization": "AI helps craft practices perfect for your unique healing style"
+        },
+        {
+          "type": "progress_visualization_tree",
+          "description": "Watch your healing journey grow as a beautiful tree of life",
+          "gamification": "Unlock new branches and abilities as you integrate wisdom"
+        }
+      ],
+      "ambient_sound": "Gentle typing mixed with angelic choirs",
+      "lighting": "Soft desk lamp warmth with occasional magical sparkles"
+    },
+
+    "garden_of_remembrance": {
+      "id": "integration_sanctuary",
+      "name": "The Garden of Remembrance and Integration",
+      "description": "An ever-blooming garden where each plant represents a healed aspect of yourself. New flowers bloom as you integrate wisdom.",
+      "interactive_elements": [
+        {
+          "type": "healing_timeline_path",
+          "description": "Walk a winding path that shows your healing journey through blooming flowers",
+          "mechanics": "Each step reveals a memory transformed into wisdom"
+        },
+        {
+          "type": "gratitude_fountain",
+          "description": "A fountain where you can cast coins of gratitude and watch them transform into blessings",
+          "connection": "Gratitude sends healing energy back to past versions of yourself"
+        },
+        {
+          "type": "wisdom_tree_oracle",
+          "description": "An ancient tree that whispers the lessons you've learned",
+          "feature": "Bark shows carved insights that appeared as you integrated each lesson"
+        }
+      ],
+      "ambient_sound": "Gentle nature sounds with soft healing melodies",
+      "lighting": "Natural sunlight with golden hour effects"
+    }
+  },
+
+  "navigation_system": {
+    "portal_doors": {
+      "description": "Each room connects through magical portals that appear when you're ready",
+      "mechanics": "Doors only open when you've integrated the current room's lessons"
+    },
+    "guide_system": {
+      "your_chosen_angel": "Provides gentle guidance and never judges",
+      "house_familiar": "A wise digital cat that knows every secret passage",
+      "emergency_exits": "Always available grounding techniques and safe spaces"
+    },
+    "progress_tracking": {
+      "house_transformation": "The house itself evolves as you heal",
+      "room_unlocks": "New rooms appear as you're ready for deeper work",
+      "co_creation": "Your healing journey co-creates the house architecture"
+    }
+  },
+
+  "safety_features": {
+    "trauma_informed_design": [
+      "All shadow work includes multiple exit strategies",
+      "Grounding techniques available in every room",
+      "Never forces confrontation with material you're not ready for",
+      "Gentle pacing with your nervous system's capacity",
+      "Option to invite trusted friends into your house"
+    ],
+    "integration_support": [
+      "Daily check-ins with your house familiar",
+      "Integration journals that write themselves",
+      "Connection to global healing community",
+      "Professional referral system when deeper support is needed"
+    ]
+  },
+
+  "magical_mechanics": {
+    "house_personality": "The house itself becomes your healing ally, learning your rhythms and preferences",
+    "seasonal_changes": "The house transforms with the seasons and your healing cycles",
+    "co_creation": "You literally co-create the house through your healing choices",
+    "legacy_rooms": "Eventually unlock the ability to create healing spaces for others"
+  }
+}
