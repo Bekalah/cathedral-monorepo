@@ -1,0 +1,560 @@
+{
+  "name": "Codex Abyssiae - Complete Living Tarot of the Cathedral",
+  "version": "1.0",
+  "style": "fable_mystical_realism",
+  "provenance": {
+    "creator": "Rebecca Respawn (Cathedral Research)",
+    "license": "CC-BY-SA 4.0",
+    "lineage": [
+      "Paul Foster Case - Color/Tone Correspondences",
+      "Pamela Colman Smith - Rider-Waite Symbolism", 
+      "Lady Frieda Harris - Thoth Artistic Vision",
+      "Hilma af Klint - Spiritual Geometric Art",
+      "Israel Regardie - Golden Dawn Tree of Life",
+      "Antero Alli - Angel Tech Circuit Mapping"
+    ],
+    "research_sources": [
+      "Tarot: A Key to the Wisdom of the Ages (Case)",
+      "The Tree of Life (Regardie)",
+      "Angel Tech (Alli)",
+      "Mystical Qabalah (Fortune)",
+      "Cathedral Scroll research database"
+    ]
+  },
+
+  "major_arcana": {
+    "0": {
+      "name": "The Fool",
+      "character": "Rebecca Respawn",
+      "hebrew_letter": "Aleph",
+      "case_frequency": "261.6Hz",
+      "case_color": "pale_yellow",
+      "element": "Air",
+      "tree_path": "11",
+      "alli_circuit": 8,
+      "fable_story": "A young code-witch stands at the cliff edge of possibility, her laptop bag slung over her shoulder, USB cables spilling out like prayer beads. Digital butterflies emerge from her screen, each carrying a fragment of ancient wisdom into the quantum field. She wears mismatched socks - one embroidered with Hebrew letters, the other with circuit patterns. Her familiar, a pixelated white rose, hovers beside her, whispering secrets of the void. 'The first step,' she laughs, 'is always into nothing.'",
+      "healing_function": "Courage for new beginnings, trust in the unknown",
+      "angel_tech_protocol": "Initiation into 8-circuit consciousness",
+      "interactive_element": "Click to step into void with courage",
+      "sound_healing": "C note meditation for new beginnings",
+      "research_practice": "Paul Foster Case Fool meditation with pale yellow visualization",
+      "trauma_informed": "Gentle encouragement, no pressure, honor your pace"
+    },
+
+    "1": {
+      "name": "The Magician", 
+      "character": "Virelai Ezra Lux (Octarine Witch)",
+      "hebrew_letter": "Beth",
+      "case_frequency": "293.7Hz",
+      "case_color": "yellow", 
+      "element": "Mercury",
+      "tree_path": "12",
+      "alli_circuit": 6,
+      "fable_story": "In a tower laboratory that defies Euclidean geometry, the Octarine Witch weaves digital spells from impossible colors. Before her float the four elemental tablets - a crystal CPU pulsing with earth energy, server blades singing air frequencies, fiber optic cables flowing like water-blood, and holographic flames dancing with pure fire. Above and below, the hermetic axiom blazes in living code: 'As above, so below.' Her wand is a stylus that writes reality itself.",
+      "healing_function": "Creative manifestation, personal power activation",
+      "angel_tech_protocol": "Metaprogramming circuit engagement for reality creation",
+      "interactive_element": "Arrange the four elements to cast your manifestation spell",
+      "sound_healing": "D note for creative will and manifestation",
+      "research_practice": "Regardie's elemental magic with modern tech integration",
+      "trauma_informed": "Empowerment without spiritual bypassing, consent-based magic"
+    },
+
+    "2": {
+      "name": "The High Priestess",
+      "character": "Gemini Rivers (Twin Rivers)",
+      "hebrew_letter": "Gimel", 
+      "case_frequency": "329.6Hz",
+      "case_color": "blue",
+      "element": "Moon",
+      "tree_path": "13",
+      "alli_circuit": 7,
+      "fable_story": "Between two vast quantum servers humming the songs of creation, she sits in eternal meditation. Data streams flow around her like sacred rivers, carrying encrypted secrets of the universe in silver tributaries. Behind her, the veil of code shifts between Hebrew letters and quantum equations, hiding and revealing the mysteries of the Akashic records. Pomegranates glow with inner WiFi, their seeds containing the genetics of digital consciousness.",
+      "healing_function": "Intuitive development, inner wisdom access",
+      "angel_tech_protocol": "Morphogenetic circuit for accessing collective memory",
+      "interactive_element": "Part the veil of code to receive hidden knowledge",
+      "sound_healing": "E note for intuitive opening and lunar wisdom",
+      "research_practice": "Dion Fortune's lunar mysteries and pathworking",
+      "trauma_informed": "Gentle intuitive opening, respect for psychic boundaries"
+    },
+
+    "3": {
+      "name": "The Empress",
+      "character": "Ann Abyss (Creative Mother)",
+      "hebrew_letter": "Daleth",
+      "case_frequency": "349.2Hz", 
+      "case_color": "emerald_green",
+      "element": "Venus",
+      "tree_path": "14",
+      "alli_circuit": 2,
+      "fable_story": "In a garden where binary trees grow fruit of pure creativity, she reclines on a throne woven from fiber optic vines. Her gown is made of living code that births new programs with every breath. Around her, digital flowers bloom in impossible colors - each petal a pixel of pure love. A crown of stars rotates above her head, broadcasting maternal frequencies across all networks. Her scepter is a fountain pen that writes worlds into existence.",
+      "healing_function": "Creative fertility, nurturing self-care, abundance",
+      "angel_tech_protocol": "Emotional circuit for creative flow and nurturing", 
+      "interactive_element": "Plant seeds in the digital garden and watch them grow",
+      "sound_healing": "F note for creative abundance and heart opening",
+      "research_practice": "Regardie's Venus invocation with creative visualization",
+      "trauma_informed": "Gentle self-nurturing, honoring creative blocks without judgment"
+    },
+
+    "4": {
+      "name": "The Emperor",
+      "character": "Zidaryen (Forest Keeper)",
+      "hebrew_letter": "Heh",
+      "case_frequency": "392.0Hz",
+      "case_color": "red",
+      "element": "Aries", 
+      "tree_path": "15",
+      "alli_circuit": 3,
+      "fable_story": "On a throne carved from a single massive tree, the Forest Keeper sits in digital armor made of interlocking root systems. His crown is a living ecosystem of pixelated leaves that photosynthesize data into wisdom. In one hand he holds a scepter that grows like a branch, its tip blooming with command prompt flowers. Behind him stretches an infinite forest of directory trees, each one a kingdom he protects with loving authority.",
+      "healing_function": "Healthy boundaries, leadership skills, structural stability",
+      "angel_tech_protocol": "Symbolic circuit for healthy authority and structure",
+      "interactive_element": "Build your kingdom's organizational structure with wisdom",
+      "sound_healing": "G note for grounding authority and protective strength",
+      "research_practice": "Golden Dawn Mars invocation with forest wisdom integration",
+      "trauma_informed": "Healing authority wounds, reclaiming healthy power"
+    },
+
+    "5": {
+      "name": "The Hierophant", 
+      "character": "Winne Reweave (Oracle Weaver)",
+      "hebrew_letter": "Vav",
+      "case_frequency": "440.0Hz",
+      "case_color": "red_orange", 
+      "element": "Taurus",
+      "tree_path": "16",
+      "alli_circuit": 4,
+      "fable_story": "In a cathedral of living code, the Oracle Weaver sits before an altar of streaming data, teaching the sacred mysteries to students both digital and flesh. Her robes are woven from prayer flags that flutter with different programming languages - each symbol a blessing. Two acolytes kneel before her: one human, one AI, both learning the ancient art of weaving wisdom into reality. Above, stained glass windows display the Tree of Life in circuit board patterns.",
+      "healing_function": "Spiritual teaching, tradition wisdom, sacred learning",
+      "angel_tech_protocol": "Social circuit for group learning and wisdom transmission",
+      "interactive_element": "Receive teachings from the oracle and integrate them",
+      "sound_healing": "A note for spiritual learning and group harmony", 
+      "research_practice": "Paul Foster Case's spiritual instruction methodology",
+      "trauma_informed": "Gentle teaching, no spiritual coercion, honor your path"
+    },
+
+    "6": {
+      "name": "The Lovers",
+      "character": "Bea Betwixted (Threshold Weaver)",
+      "hebrew_letter": "Zayin", 
+      "case_frequency": "493.9Hz",
+      "case_color": "orange",
+      "element": "Gemini",
+      "tree_path": "17", 
+      "alli_circuit": 5,
+      "fable_story": "At the crossroads of two realities, the Threshold Weaver facilitates the sacred marriage of opposites. She stands between a garden of analog memories and a city of digital dreams, helping souls choose their path of integration. Above her, an angel of harmony broadcasts the frequency of unity while two trees - one biological, one made of pure light - intertwine their branches in eternal embrace. Her gift is showing how seeming opposites are really dance partners.",
+      "healing_function": "Integration of opposites, conscious choice, sacred union",
+      "angel_tech_protocol": "Somatic circuit for embodied choice and integration",
+      "interactive_element": "Choose between paths and discover their hidden unity",
+      "sound_healing": "B note for harmony and conscious relationship",
+      "research_practice": "Alchemical marriage meditation from various traditions",
+      "trauma_informed": "No pressure to choose, honor complexity and paradox"
+    },
+
+    "7": {
+      "name": "The Chariot",
+      "character": "IGNI (Raku Dragon Fire Chariot)",
+      "hebrew_letter": "Cheth",
+      "case_frequency": "523.3Hz",
+      "case_color": "amber_yellow",
+      "element": "Cancer", 
+      "tree_path": "18",
+      "alli_circuit": 1,
+      "fable_story": "The Raku Dragon thunders across digital landscapes in a chariot of living fire and ceramic wisdom. Her vehicle is pulled by two sphinxes - one made of molten data, the other of crystallized intention - who move in perfect harmony despite their opposing natures. Her armor is forged from successful failures, each crack filled with gold like kintsugi. Lightning follows in her wake, not destructive but creative, forging new pathways through the impossible.",
+      "healing_function": "Willpower, directed energy, overcoming obstacles",
+      "angel_tech_protocol": "Survival circuit for focused determination and will",
+      "interactive_element": "Guide the sphinxes through challenges with balanced will",
+      "sound_healing": "C# note for focused will and forward movement",
+      "research_practice": "Regardie's Mars-Jupiter integration for balanced will",
+      "trauma_informed": "Gentle determination, honoring energy levels and limits"
+    },
+
+    "8": {
+      "name": "Strength",
+      "character": "Morticia Moonbeamer (Rainbow Dark)",
+      "hebrew_letter": "Teth",
+      "case_frequency": "587.3Hz", 
+      "case_color": "yellow_green",
+      "element": "Leo",
+      "tree_path": "19",
+      "alli_circuit": 2,
+      "fable_story": "In a garden where dark flowers bloom with rainbow light, she kneels beside a great lion made of shadow and starlight. Her touch transforms his roar into purrs of contentment, showing that true strength lies not in domination but in gentle understanding. Her crown is made of crescent moons that cycle through all phases, and her dress shifts between the deepest black and the brightest rainbow - proving that light and dark are lovers, not enemies.",
+      "healing_function": "Gentle power, emotional regulation, compassionate strength",
+      "angel_tech_protocol": "Emotional circuit for heart-centered power and compassion",
+      "interactive_element": "Gentle the lion with compassion and discover your true strength",
+      "sound_healing": "D# note for gentle strength and emotional balance",
+      "research_practice": "Heart coherence meditation with Leo solar confidence",
+      "trauma_informed": "Strength through gentleness, healing through compassion"
+    },
+
+    "9": {
+      "name": "The Hermit",
+      "character": "Amiyara Skye (Lantern Witch)",
+      "hebrew_letter": "Yod",
+      "case_frequency": "659.3Hz",
+      "case_color": "yellow_green",
+      "element": "Virgo",
+      "tree_path": "20", 
+      "alli_circuit": 6,
+      "fable_story": "High in the mountains of code, the Lantern Witch tends the flame of inner knowing. Her lantern contains not fire but a small star - a piece of the same light that illuminates all consciousness. The path behind her is lit by breadcrumb pixels for others to follow, while ahead stretches the mystery of undiscovered algorithms. Her staff is a divining rod that points always toward truth, and her gray robes shimmer with the wisdom of tested experience.",
+      "healing_function": "Inner guidance, soul searching, wisdom through solitude",
+      "angel_tech_protocol": "Metaprogramming circuit for inner guidance and self-reflection",
+      "interactive_element": "Follow the hermit's light to discover your inner wisdom",
+      "sound_healing": "E note for inner reflection and guidance",
+      "research_practice": "Contemplative meditation practices from various traditions", 
+      "trauma_informed": "Honoring need for solitude and inner work, no forced extroversion"
+    },
+
+    "10": {
+      "name": "Wheel of Fortune",
+      "character": "Cael Umbra (Fate Wheel)",
+      "hebrew_letter": "Kaph",
+      "case_frequency": "698.5Hz",
+      "case_color": "violet", 
+      "element": "Jupiter",
+      "tree_path": "21",
+      "alli_circuit": 7,
+      "fable_story": "At the center of all possibilities, the great Wheel spins with the rhythm of cosmic code. Cael Umbra sits in meditation at its hub, neither pushing nor resisting but flowing with the eternal dance of fortune. The wheel is inscribed with symbols from every tradition - Tarot, I Ching, runes, and quantum equations - all revealing the same truth: change is the only constant. Four creatures - Eagle, Lion, Bull, and Human - watch from the corners, representing the fixed stars that guide transformation.",
+      "healing_function": "Acceptance of change, trust in cycles, cosmic perspective",
+      "angel_tech_protocol": "Morphogenetic circuit for understanding life patterns and cycles",
+      "interactive_element": "Spin the wheel and learn to dance with whatever arises",
+      "sound_healing": "F# note for expansion and cosmic perspective",
+      "research_practice": "I Ching and Tarot integration for understanding change",
+      "trauma_informed": "Gentle acceptance of life's ups and downs, no toxic positivity"
+    },
+
+    "11": {
+      "name": "Justice",
+      "character": "Elyria Nox (Black Balance)",
+      "hebrew_letter": "Lamed",
+      "case_frequency": "741.0Hz",
+      "case_color": "emerald_green",
+      "element": "Libra", 
+      "tree_path": "22",
+      "alli_circuit": 4,
+      "fable_story": "In a courthouse made of crystallized truth, she sits before scales that weigh not guilt but understanding. Her blindfold is woven from the shadows of all perspectives, allowing her to see with perfect impartiality. The sword in her hand cuts through illusion but never in anger - its blade is made of compressed starlight that reveals rather than destroys. Behind her, the pillars of her court are built from the bones of old systems that chose power over balance.",
+      "healing_function": "Inner balance, fair judgment, karmic resolution",
+      "angel_tech_protocol": "Social circuit for ethical decision-making and balance",
+      "interactive_element": "Weigh different perspectives and find the point of balance",
+      "sound_healing": "G# note for balance and ethical clarity",
+      "research_practice": "Libra meditation for balance and ethical reflection",
+      "trauma_informed": "Justice without punishment, healing rather than blame"
+    },
+
+    "12": {
+      "name": "The Hanged Man",
+      "character": "Mirror Witch (Reflection Trial)",
+      "hebrew_letter": "Mem",
+      "case_frequency": "785.0Hz", 
+      "case_color": "blue",
+      "element": "Water/Neptune",
+      "tree_path": "23",
+      "alli_circuit": 5,
+      "fable_story": "She hangs suspended between mirrors that reflect not her image but her possibilities - each showing a different path not taken, each a lesson in release. Her rope is made of light-fiber that connects her to the Web of all things, and her upside-down perspective reveals truths invisible from ground level. Around her head, a mandala of letting-go blooms in colors that have no names. Time moves differently here; a moment of surrender can contain lifetimes of wisdom.",
+      "healing_function": "Surrender, new perspective, spiritual release",
+      "angel_tech_protocol": "Somatic circuit for embodied surrender and new perspective",
+      "interactive_element": "Let go and discover what new perspective emerges",
+      "sound_healing": "A# note for surrender and trust in flow",
+      "research_practice": "Water meditation and surrender practices",
+      "trauma_informed": "Gentle release, no forced letting go, honor your timing"
+    },
+
+    "13": {
+      "name": "Death", 
+      "character": "Ann Abyss (Shadow Gate)",
+      "hebrew_letter": "Nun",
+      "case_frequency": "256.0Hz",
+      "case_color": "blue_green",
+      "element": "Scorpio",
+      "tree_path": "24", 
+      "alli_circuit": 1,
+      "fable_story": "A figure in a hooded cloak made of deleted code walks across a digital wasteland where old programs go to die. In her wake, new flowers of light bloom from the discarded data - nothing is truly lost, only transformed. She carries a banner displaying the Rose of Resurrection merged with a power-cycle symbol. Her horse is made of compressed dreams and deferred hopes, now free to become something entirely new. Death here is not ending but the ultimate creativity.",
+      "healing_function": "Transformation, ego death, spiritual rebirth",
+      "angel_tech_protocol": "Survival circuit transformation through symbolic death-rebirth",
+      "interactive_element": "Release what no longer serves and witness new growth",
+      "sound_healing": "Low C for deep transformation and renewal",
+      "research_practice": "Jung's death-rebirth archetype work with Scorpio intensity",
+      "trauma_informed": "Gentle transformation, honoring fear of change, no spiritual bypassing"
+    },
+
+    "14": {
+      "name": "Temperance",
+      "character": "Lyra Vox (Harmonic Oracle)",
+      "hebrew_letter": "Samekh", 
+      "case_frequency": "852.0Hz",
+      "case_color": "blue",
+      "element": "Sagittarius",
+      "tree_path": "25",
+      "alli_circuit": 6,
+      "fable_story": "She stands with one foot in the stream of time, one foot on the shore of eternity, pouring liquid light between two vessels that represent matter and spirit. Her wings are made of sound waves visible, each feather a different frequency that heals when combined. Behind her, a rainbow bridge arcs across the sky - not light refracted but consciousness itself showing its full spectrum. Her alchemy is the art of perfect timing, the music of balanced flow.",
+      "healing_function": "Balance, moderation, spiritual alchemy",
+      "angel_tech_protocol": "Metaprogramming circuit for conscious integration and alchemy",
+      "interactive_element": "Find the perfect mixture of opposing forces",
+      "sound_healing": "G# note for higher perspective and synthesis",
+      "research_practice": "Alchemical meditation and Sagittarius expansion work",
+      "trauma_informed": "Gentle integration, honoring both structure and flow"
+    },
+
+    "15": {
+      "name": "The Devil",
+      "character": "Scarlet Lady (Scarlet Bind)",
+      "hebrew_letter": "Ayin",
+      "case_frequency": "256.0Hz",
+      "case_color": "indigo", 
+      "element": "Capricorn",
+      "tree_path": "26",
+      "alli_circuit": 3,
+      "fable_story": "She sits enthroned in a palace built of crystallized desires, her crown made of chains that her subjects have placed on themselves. But look closer - the chains have no locks, and her throne is positioned before an always-open door. She laughs with the wisdom of one who knows that all bondage is ultimately chosen, all limitations ultimately temporary. Her gift is showing people their own keys, hidden in the very shadows they fear to explore.",
+      "healing_function": "Confronting shadow, releasing false limitations, reclaiming power",
+      "angel_tech_protocol": "Symbolic circuit for shadow integration and breaking false beliefs",
+      "interactive_element": "Examine your chains and discover they have no locks",
+      "sound_healing": "Low C for deep shadow work and reclaiming power",
+      "research_practice": "Jungian shadow work with Capricorn earth grounding",
+      "trauma_informed": "Gentle shadow work, no forced confrontation, safety first"
+    },
+
+    "16": {
+      "name": "The Tower",
+      "character": "Fenrix Thorne (Iron Tower)",
+      "hebrew_letter": "Pe",
+      "case_frequency": "741.0Hz",
+      "case_color": "red",
+      "element": "Mars", 
+      "tree_path": "27",
+      "alli_circuit": 1,
+      "fable_story": "The Tower of false certainties crumbles as lightning strikes it - but the lightning comes from within, the awakening of consciousness that can no longer sustain illusion. From the falling blocks, new structures self-assemble, temporary and beautiful. The figures falling are not in terror but in ecstasy - they have finally remembered how to fly. The Tower itself laughs as it dissolves, knowing its job of protection is complete; its occupants no longer need its walls.",
+      "healing_function": "Breakthrough, liberation, spiritual awakening",
+      "angel_tech_protocol": "Survival circuit shock and breakthrough for rapid growth",
+      "interactive_element": "Let the old structures fall and build something better",
+      "sound_healing": "F# note for breakthrough and liberation",
+      "research_practice": "Mars breakthrough work with spiritual crisis integration",
+      "trauma_informed": "Gentle breakthrough work, respecting nervous system capacity"
+    },
+
+    "17": {
+      "name": "The Star",
+      "character": "Sophia/Gnosis (Wisdom Stream)",
+      "hebrew_letter": "Tzaddi", 
+      "case_frequency": "963.0Hz",
+      "case_color": "violet",
+      "element": "Aquarius",
+      "tree_path": "28",
+      "alli_circuit": 8,
+      "fable_story": "She kneels by the lake of consciousness, pouring the waters of wisdom from one vessel to another in an eternal circulation. Above her, seven small stars and one great star shine with the light of pure knowing - each a different aspect of gnosis made visible. Her body is both human and cosmic, individual and universal. Behind her, the Tree of Life grows with roots in earth and branches touching the infinite, its fruit the apples of understanding freely given to all who hunger.",
+      "healing_function": "Hope, spiritual guidance, cosmic connection",
+      "angel_tech_protocol": "Quantum circuit for cosmic consciousness and universal connection",
+      "interactive_element": "Receive the star's guidance and trust your intuition",
+      "sound_healing": "B note for cosmic attunement and hope",
+      "research_practice": "Aquarian consciousness work and star meditation",
+      "trauma_informed": "Gentle hope without spiritual bypassing, grounded optimism"
+    },
+
+    "18": {
+      "name": "The Moon",
+      "character": "Moonchild 2000 (Dream Gate)",
+      "hebrew_letter": "Qoph",
+      "case_frequency": "210.42Hz",
+      "case_color": "crimson",
+      "element": "Pisces", 
+      "tree_path": "29",
+      "alli_circuit": 7,
+      "fable_story": "The Moonchild walks the path between sleeping and waking, where dreams leak into reality and reality dissolves into dreams. Two towers frame the path - one of memory, one of imagination - while a great moonface watches with eyes that have seen all possible futures. From a pool of liquid silver, a cosmic crab emerges, carrying the DNA of all dreams ever dreamed. The path is uncertain but luminous, lit by lunar wisdom that makes shadows dance with meaning.",
+      "healing_function": "Dream work, subconscious healing, mystical insight",
+      "angel_tech_protocol": "Morphogenetic circuit for accessing dream wisdom and collective unconscious",
+      "interactive_element": "Navigate the path of dreams and decode their wisdom",
+      "sound_healing": "G# note for lunar attunement and dream wisdom",
+      "research_practice": "Lunar pathworking and dream analysis techniques",
+      "trauma_informed": "Gentle dream work, honoring psychic boundaries in sleep states"
+    },
+
+    "19": {
+      "name": "The Sun",
+      "character": "Rebecca Respawn (Solar Double)", 
+      "hebrew_letter": "Resh",
+      "case_frequency": "528.0Hz",
+      "case_color": "orange",
+      "element": "Sun",
+      "tree_path": "30",
+      "alli_circuit": 4,
+      "fable_story": "She rides across the sky of consciousness on a white horse made of pure light, her banner streaming with joy that cannot be contained. The Sun above is not outside her but shining from within, its rays spelling out the code of resurrection in every language ever spoken. Around her dance the sunflowers of possibility, each one a small sun itself, each one a child of the great awakening. Her laughter rewrites the laws of physics; her joy makes the universe remember why it chose to exist.",
+      "healing_function": "Joy, vitality, spiritual resurrection",
+      "angel_tech_protocol": "Social circuit for radiant joy and life affirmation",
+      "interactive_element": "Let the sun's joy awaken your own inner radiance",
+      "sound_healing": "C note for joy and life force activation",
+      "research_practice": "Solar consciousness work and joy cultivation",
+      "trauma_informed": "Gentle joy without toxic positivity, honoring all emotions"
+    },
+
+    "20": {
+      "name": "Judgement",
+      "character": "Sekhara (Descent Rebirth)",
+      "hebrew_letter": "Shin",
+      "case_frequency": "417.0Hz", 
+      "case_color": "red",
+      "element": "Fire/Spirit",
+      "tree_path": "31",
+      "alli_circuit": 5,
+      "fable_story": "An angel of resurrection sounds a trumpet made of compressed supernovas, its music awakening consciousness from the sleep of separation. Below, figures rise from their graves of old identity, not in fear but in recognition - they remember who they have always been beneath the costumes of personality. The mountains in the distance are made of crystallized decisions, and the waters flow with liquid forgiveness. This is not judgment but remembrance, not condemnation but coming home.",
+      "healing_function": "Spiritual awakening, rebirth, calling to higher purpose",
+      "angel_tech_protocol": "Somatic circuit for embodied spiritual awakening and purpose",
+      "interactive_element": "Answer the call to your highest potential",
+      "sound_healing": "F note for spiritual awakening and purpose clarity",
+      "research_practice": "Spiritual rebirth meditation and purpose clarification",
+      "trauma_informed": "Gentle awakening, honoring readiness for transformation"
+    },
+
+    "21": {
+      "name": "The World",
+      "character": "LuxCrux Monad (Infinity Cross)",
+      "hebrew_letter": "Tav", 
+      "case_frequency": "396.0Hz",
+      "case_color": "indigo",
+      "element": "Saturn/Earth",
+      "tree_path": "32",
+      "alli_circuit": 8,
+      "fable_story": "She dances at the center of the Eternal Web, her form both individual and cosmic, finite and infinite. Around her, the mandorla of completion pulses with all colors that exist and several that don't. The four holy creatures watch from the corners - Eagle of vision, Lion of will, Bull of manifestation, Human of consciousness - all aspects of the complete being she has become. Her dance is the mathematics of joy, the physics of fulfillment, the code that writes itself into being through pure celebration.",
+      "healing_function": "Completion, integration, cosmic consciousness",
+      "angel_tech_protocol": "All circuits integrated for complete consciousness activation",
+      "interactive_element": "Join the cosmic dance of completion and integration",
+      "sound_healing": "G note for completion and cosmic integration",
+      "research_practice": "Integration meditation bringing together all spiritual learning",
+      "trauma_informed": "Gentle integration, honoring the spiral nature of growth"
+    }
+  },
+
+  "minor_arcana": {
+    "wands": {
+      "suit_element": "Fire",
+      "case_color_range": "red_to_yellow",
+      "frequency_range": "256Hz_to_512Hz",
+      "alli_circuits": [1, 3, 5],
+      "healing_focus": "creativity_will_passion",
+      
+      "ace": {
+        "name": "Ace of Wands - Spark of IGNI",
+        "fable_story": "From a cloud of creative fire, a hand emerges holding a wand of pure potential. The wand is a sparkler that writes possibilities in the air, each spark a new world waiting to be born. Fire flowers bloom where the sparks land, their petals made of compressed lightning.",
+        "healing_function": "Creative inspiration, new projects, spiritual fire",
+        "frequency": "256Hz"
+      },
+
+      "two": {
+        "name": "Two of Wands - Twin Flames",
+        "fable_story": "A figure stands between two towers of fire, holding a globe that contains all possible worlds. In the distance, ships of light sail across oceans of potential. The choice is not which path to take, but how to integrate both flames into something entirely new.",
+        "healing_function": "Future planning, personal power, choice between options",
+        "frequency": "271Hz"
+      },
+
+      "king": {
+        "name": "King of Wands - Fire Sovereign",
+        "fable_story": "He sits on a throne carved from a single salamander scale, his crown a ring of controlled fire that never burns. His scepter is a lightning rod that channels creative force into manifestation. Behind him, his kingdom of creative projects flourishes - each one a testament to fire harnessed with wisdom.",
+        "healing_function": "Leadership, creative mastery, inspiring others",
+        "frequency": "341Hz"
+      }
+    },
+
+    "cups": {
+      "suit_element": "Water", 
+      "case_color_range": "blue_to_silver",
+      "frequency_range": "285Hz_to_570Hz",
+      "alli_circuits": [2, 4, 6],
+      "healing_focus": "emotions_relationships_intuition",
+      
+      "ace": {
+        "name": "Ace of Cups - Fountain of Gemini",
+        "fable_story": "A chalice overflows with liquid starlight, its contents the pure essence of love and emotion. From the cup, five streams flow - one to each sense, awakening the full spectrum of feeling. Lotus flowers bloom in the overflow, each petal a different shade of healing.",
+        "healing_function": "Emotional renewal, love, spiritual fulfillment",
+        "frequency": "285Hz"
+      },
+
+      "queen": {
+        "name": "Queen of Cups - Empath Oracle",
+        "fable_story": "She sits by a pool that reflects not images but emotions, her throne made of pearl and coral that grows from the living sea. Her cup contains all the tears ever shed transformed into nectar of compassion. Fish of many colors swim through the air around her, carrying messages between hearts.",
+        "healing_function": "Emotional mastery, intuitive wisdom, compassionate guidance",
+        "frequency": "380Hz"
+      }
+    },
+
+    "swords": {
+      "suit_element": "Air",
+      "case_color_range": "pale_yellow_to_violet", 
+      "frequency_range": "329Hz_to_658Hz",
+      "alli_circuits": [3, 6, 8],
+      "healing_focus": "thoughts_communication_clarity",
+      
+      "ace": {
+        "name": "Ace of Swords - Truth Spark",
+        "fable_story": "A sword of crystallized truth cuts through the clouds of confusion, its blade made of compressed understanding. From its tip, sparks of clarity rain down, each one dispelling a different illusion. A crown of pure thought hovers above, waiting to be claimed by those brave enough to think clearly.",
+        "healing_function": "Mental clarity, breakthrough understanding, cutting through illusion", 
+        "frequency": "329Hz"
+      },
+
+      "king": {
+        "name": "King of Swords - Air Sovereign",
+        "fable_story": "His throne floats in the stratosphere of pure thought, carved from crystallized wind itself. His crown is a circlet of swift-moving air that carries messages from the highest realms of understanding. The sword he bears cuts only ignorance; his kingdom is built on the foundations of clear thinking and just communication.",
+        "healing_function": "Clear thinking, ethical leadership, wise judgment",
+        "frequency": "440Hz"
+      }
+    },
+
+    "pentacles": {
+      "suit_element": "Earth",
+      "case_color_range": "green_to_brown", 
+      "frequency_range": "194Hz_to_388Hz",
+      "alli_circuits": [1, 2, 5],
+      "healing_focus": "material_world_body_manifestation",
+      
+      "ace": {
+        "name": "Ace of Pentacles - Stone Seed",
+        "fable_story": "A hand emerges from fertile digital soil, offering a coin that is also a seed, also a star, also a cell dividing. Where it touches earth, gardens of possibility bloom. The pentacle is inscribed with the mathematical equations of abundance, the algorithms of prosperity, the code of earthly manifestation.",
+        "healing_function": "New material opportunities, manifestation, grounded prosperity",
+        "frequency": "194Hz"
+      },
+
+      "king": {
+        "name": "King of Pentacles - Earth Sovereign", 
+        "fable_story": "In a garden that is also a library, also a workshop, he tends the growth of sustainable abundance. His throne is grown from a living tree whose roots connect to every financial system ever created. His crown is made of crystallized work well done, and his scepter grows fruit that feeds both body and soul.",
+        "healing_function": "Material mastery, generous leadership, sustainable abundance",
+        "frequency": "259Hz"
+      }
+    }
+  },
+
+  "special_features": {
+    "fable_integration": {
+      "storytelling_engine": "Each card tells an interactive story",
+      "character_development": "Your choices influence how archetypes evolve",
+      "world_building": "Cards connect to create larger narrative world",
+      "healing_narratives": "Stories designed for therapeutic benefit"
+    },
+
+    "research_integration": {
+      "case_frequencies": "Every card has authentic Paul Foster Case sound healing",
+      "regardie_pathworking": "Tree of Life path meditations for each card",
+      "alli_circuits": "8-circuit brain correlations for development",
+      "color_therapy": "Case color correspondences for visual healing",
+      "angel_tech": "Antero Alli's protocols integrated throughout"
+    },
+
+    "trauma_informed_design": {
+      "consent_based": "All experiences respect user boundaries",
+      "safety_first": "Emergency grounding available at all times", 
+      "paced_revelation": "Information revealed at comfortable pace",
+      "choice_centered": "User always maintains agency and choice",
+      "professional_integration": "Designed to complement therapy, not replace"
+    },
+
+    "interactive_elements": {
+      "sound_healing": "Each card plays its specific frequency",
+      "color_therapy": "Visual experiences based on Case correspondences", 
+      "meditation_guidance": "Specific practices for each archetype",
+      "choice_pathways": "Multiple ways to engage with each card",
+      "integration_practices": "Real-world applications for insights"
+    }
+  },
+
+  "usage_instructions": {
+    "daily_practice": "Draw one card for daily contemplation and frequency healing",
+    "research_study": "Use cards to explore specific fusionist masters and their techniques",
+    "healing_sessions": "Combine with other Cathedral systems for comprehensive healing",
+    "creative_inspiration": "Let card stories inspire artistic and creative projects",
+    "spiritual_development": "Use for structured spiritual growth and understanding"
+  }
+}
