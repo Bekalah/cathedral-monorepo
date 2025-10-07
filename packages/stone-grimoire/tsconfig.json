@@ -1,0 +1,25 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react",
+    "paths": {
+      "@cathedral/*": ["../../packages/*/src", "../../packages/*"],
+      "@/*": ["src/*"]
+    }
+  },
+  "include": [
+    "src/**/*",
+    "*.ts",
+    "*.tsx",
+    "*.js",
+    "*.jsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    // Exclude complex engine and controller not used by this app build
+    "../../packages/codex-musical-system/src/Codex144MusicalEngine.ts",
+    "src/components/WhiteNoiseController.tsx"
+  ]
+}

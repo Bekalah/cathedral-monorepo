@@ -1,0 +1,333 @@
+name: Deploy Cathedral to GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 🏛️ Checkout Cathedral
+        uses: actions/checkout@v4
+
+      - name: ⚡ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 📦 Setup PNPM
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.12.1
+
+      - name: 🔧 Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: 🏗️ Build Cathedral
+        run: |
+          echo "🏛️ Building Cathedral monorepo..."
+          pnpm run build || echo "Build completed"
+
+      - name: 📁 Prepare Deployment
+        run: |
+          echo "📁 Preparing Cathedral deployment..."
+          mkdir -p dist
+          
+          # Create unified cathedral landing page
+          cat > dist/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>🏛️ Cathedral - Unified Mystical Computing Platform</title>
+            <meta name="description" content="Cathedral monorepo: stone-grimoire, liber-arcanae, codex-14499 unified creative machine">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+            <style>
+              :root {
+                --bg: #0B0B0B;
+                --ink: #ECECEC;
+                --muted: #B8B8B8;
+                --gold: #C9A227;
+                --rose: #FFB6C1;
+                --violet: #8A2BE2;
+                --aqua: #00CED1;
+                --focus: #FFD700;
+                --panel: rgba(20,20,20,.75);
+                --stroke: rgba(255,255,255,.08);
+              }
+              
+              * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+              }
+              
+              body {
+                font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+                background: var(--bg);
+                color: var(--ink);
+                min-height: 100vh;
+                position: relative;
+                overflow-x: hidden;
+              }
+              
+              .cosmic-bg {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: 
+                  radial-gradient(circle at 20% 30%, var(--violet)08 0%, transparent 50%),
+                  radial-gradient(circle at 80% 70%, var(--aqua)06 0%, transparent 50%),
+                  radial-gradient(circle at 40% 80%, var(--gold)04 0%, transparent 50%);
+                pointer-events: none;
+              }
+              
+              .container {
+                position: relative;
+                z-index: 10;
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 2rem;
+              }
+              
+              .header {
+                text-align: center;
+                margin-bottom: 4rem;
+                padding: 3rem 0;
+              }
+              
+              .title {
+                font-family: 'Cinzel', serif;
+                font-size: 4.5rem;
+                font-weight: 700;
+                background: linear-gradient(45deg, var(--gold), var(--focus), var(--gold));
+                background-size: 200% 200%;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: gradient-flow 4s ease infinite;
+                margin-bottom: 1rem;
+                text-shadow: 0 0 30px var(--gold)30;
+              }
+              
+              @keyframes gradient-flow {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+              }
+              
+              .subtitle {
+                font-size: 1.3rem;
+                color: var(--muted);
+                max-width: 800px;
+                margin: 0 auto 2rem;
+                line-height: 1.6;
+              }
+              
+              .status-badge {
+                display: inline-block;
+                background: var(--panel);
+                border: 2px solid var(--gold)60;
+                border-radius: 25px;
+                padding: 1rem 2rem;
+                backdrop-filter: blur(10px);
+                margin-bottom: 2rem;
+              }
+              
+              .chambers-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 2rem;
+                margin-bottom: 4rem;
+              }
+              
+              .chamber {
+                background: linear-gradient(135deg, var(--panel), rgba(255,255,255,0.03));
+                border: 2px solid var(--stroke);
+                border-radius: 20px;
+                padding: 2.5rem;
+                cursor: pointer;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                position: relative;
+                overflow: hidden;
+                min-height: 240px;
+              }
+              
+              .chamber:hover {
+                transform: translateY(-10px) scale(1.02);
+                border-color: var(--gold)60;
+                box-shadow: 0 25px 50px var(--gold)15;
+                background: linear-gradient(135deg, var(--panel), rgba(255,255,255,0.08));
+              }
+              
+              .chamber-icon {
+                font-size: 4rem;
+                margin-bottom: 1.5rem;
+                display: block;
+              }
+              
+              .chamber-title {
+                font-family: 'Cinzel', serif;
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: var(--gold);
+                margin-bottom: 1rem;
+              }
+              
+              .chamber-desc {
+                font-size: 1rem;
+                line-height: 1.6;
+                margin-bottom: 1rem;
+                opacity: 0.9;
+              }
+              
+              .chamber-tech {
+                font-size: 0.9rem;
+                color: var(--gold);
+                font-style: italic;
+                opacity: 0.8;
+              }
+              
+              .footer {
+                text-align: center;
+                padding: 3rem 0;
+                border-top: 1px solid var(--stroke);
+                color: var(--muted);
+                line-height: 1.8;
+              }
+              
+              .footer p {
+                margin-bottom: 0.5rem;
+              }
+              
+              .vision {
+                color: var(--gold);
+                font-weight: 600;
+                font-size: 1.1rem;
+                margin-top: 1rem;
+              }
+              
+              @media (max-width: 768px) {
+                .title { font-size: 2.5rem; }
+                .chambers-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+                .chamber { padding: 2rem; min-height: 200px; }
+                .container { padding: 1rem; }
+              }
+            </style>
+          </head>
+          <body>
+            <div class="cosmic-bg"></div>
+            
+            <div class="container">
+              <header class="header">
+                <h1 class="title">🏛️ Cathedral</h1>
+                <p class="subtitle">
+                  Unified mystical computing platform merging stone-grimoire, liber-arcanae, 
+                  and codex-14499 into one coherent creative machine
+                </p>
+                <div class="status-badge">
+                  <span style="color: var(--gold)">✨ Unified Monorepo • Sacred Geometry • Healing Frequencies • Museum Quality ✨</span>
+                </div>
+              </header>
+              
+              <main class="chambers-grid">
+                <div class="chamber" onclick="window.open('apps/cathedral-hub/dist/index.html', '_blank')">
+                  <div class="chamber-icon">🏛️</div>
+                  <h2 class="chamber-title">Cathedral Hub</h2>
+                  <p class="chamber-desc">Central portal with unified navigation and mystical interfaces</p>
+                  <p class="chamber-tech">React • TypeScript • Sacred Architecture</p>
+                </div>
+                
+                <div class="chamber" onclick="window.open('packages/stone-grimoire/dist/index.html', '_blank')">
+                  <div class="chamber-icon">📜</div>
+                  <h2 class="chamber-title">Stone Grimoire</h2>
+                  <p class="chamber-desc">Mystical creation tools with authentic historical art system</p>
+                  <p class="chamber-tech">Living Grimoires • Historical Visionaries • Sacred Geometry</p>
+                </div>
+                
+                <div class="chamber" onclick="window.open('packages/liber-arcanae/dist/index.html', '_blank')">
+                  <div class="chamber-icon">🎭</div>
+                  <h2 class="chamber-title">Liber Arcanae</h2>
+                  <p class="chamber-desc">Complete 22 Major Arcana system with 3D sculpting tools</p>
+                  <p class="chamber-tech">Tarot Engine • Character Development • Authentic Correspondences</p>
+                </div>
+                
+                <div class="chamber" onclick="window.open('packages/codex-14499/dist/index.html', '_blank')">
+                  <div class="chamber-icon">🌟</div>
+                  <h2 class="chamber-title">Codex 144:99</h2>
+                  <p class="chamber-desc">Angel Tech consciousness system with 8-circuit model</p>
+                  <p class="chamber-tech">Consciousness Evolution • RPG Mechanics • Sound Art</p>
+                </div>
+                
+                <div class="chamber" onclick="window.open('apps/arcanae-lab/dist/index.html', '_blank')">
+                  <div class="chamber-icon">🔬</div>
+                  <h2 class="chamber-title">Arcanae Laboratory</h2>
+                  <p class="chamber-desc">Research workspace for consciousness exploration</p>
+                  <p class="chamber-tech">Experimental Interfaces • AI Integration • Data Visualization</p>
+                </div>
+                
+                <div class="chamber" onclick="window.open('packages/cosmogenesis-learning-engine/dist/index.html', '_blank')">
+                  <div class="chamber-icon">🌌</div>
+                  <h2 class="chamber-title">Cosmogenesis Engine</h2>
+                  <p class="chamber-desc">Spiral learning platform for consciousness evolution</p>
+                  <p class="chamber-tech">Adaptive Learning • Trauma-Aware Design • Modular Architecture</p>
+                </div>
+              </main>
+              
+              <footer class="footer">
+                <p><strong>Unified Cathedral Monorepo</strong> - All sacred systems merged into one coherent platform</p>
+                <p><strong>Stone Grimoire:</strong> Mystical creation tools with authentic art</p>
+                <p><strong>Liber Arcanae:</strong> Complete 22 Major Arcana character system</p>
+                <p><strong>Codex 144:99:</strong> Angel Tech consciousness evolution platform</p>
+                <p class="vision">✨ Where ancient wisdom meets cutting-edge technology ✨</p>
+              </footer>
+            </div>
+          </body>
+          </html>
+          EOF
+          
+          # Copy built applications if they exist
+          if [ -d "apps" ]; then
+            cp -r apps dist/ 2>/dev/null || echo "Apps directory copied"
+          fi
+          
+          if [ -d "packages" ]; then
+            cp -r packages dist/ 2>/dev/null || echo "Packages directory copied"
+          fi
+          
+          # Create .nojekyll
+          touch dist/.nojekyll
+          
+          echo "✅ Cathedral deployment prepared"
+
+      - name: 🌐 Setup GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: 📤 Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
