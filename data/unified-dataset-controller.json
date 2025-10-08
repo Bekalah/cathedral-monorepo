@@ -31,59 +31,222 @@
     }
   },
 
-  "codex_144_nodes": {
-    "source": "codex_144_nodes_template.json + enhanced_sample_nodes",
-    "total_nodes": 144,
-    "completion_status": "10 fully detailed sample nodes, 134 template nodes ready for expansion",
-    "toggle_key": "codex_nodes",
-    "categories": ["sacred_numbers", "geometry", "elements", "planets", "chakras", "healing_functions"],
-    "sample_nodes": [
-      {
-        "node_id": 1,
-        "numerology": 1,
-        "geometry": "point_of_unity",
-        "element": "Fire",
-        "planet": "Sun",
-        "chakra": "Crown",
-        "color_ray": "#FFD700",
-        "sound": "741Hz",
-        "tarot_card": ["The Magician", "Ace of Wands"],
-        "tara_overlay": "White Tara - Compassionate Healing",
-        "crystal": "Clear Quartz",
-        "symbol": "⚡",
-        "teaching_function": "Spark of Divine Consciousness - Your healing journey begins",
-        "related_gates": [8, 15, 22, 29, 36],
-        "daemon_guardian": "Ignitus the Awakener - Guardian of Sacred Beginnings",
-        "notes": "The first breath of your healing journey. Honor where you are now.",
-        "angels_connection": "Vehuiah - Divine Will",
-        "alchemy_operation": "calcination - burning away what no longer serves",
-        "reiki_symbol": "Cho Ku Rei - Power symbol for manifestation",
-        "mystery_house_room": "respawn_gate",
-        "portal_access": ["sonic_sanctum", "creative_infinity_studio"],
-        "safety_level": "gentle_introduction",
-        "trauma_considerations": "Always honors current capacity"
-      }
-    ]
-  },
-  "angels_72_complete": {
-    "source": "angels72.json",
-    "total_angels": 72,
-    "completion_status": "fully_populated",
-    "toggle_key": "angels_72",
-    "categories": ["fire_angels", "earth_angels", "air_angels", "water_angels"],
-    "integration_with_codex": "Each codex node can invoke 2-3 complementary angels",
-    "sample_integration": {
-      "node_1_angels": ["Vehuiah", "Jeliel", "Sitael"],
-      "node_8_angels": ["Achaiah", "Cahetel", "Haziel"],
-      "node_15_angels": ["Aniel", "Haamiah", "Rehael"]
+  "merged_datasets": {
+    "codex_144_nodes": {
+      "source": "codex_144_nodes_template.json + enhanced_sample_nodes",
+      "total_nodes": 144,
+      "completion_status": "10 fully detailed sample nodes, 134 template nodes ready for expansion",
+      "toggle_key": "codex_nodes",
+      "categories": ["sacred_numbers", "geometry", "elements", "planets", "chakras", "healing_functions"],
+      "sample_nodes": [
+        {
+          "node_id": 1,
+          "numerology": 1,
+          "geometry": "point_of_unity",
+          "element": "Fire",
+          "planet": "Sun",
+          "chakra": "Crown",
+          "color_ray": "#FFD700",
+          "sound": "741Hz",
+          "tarot_card": ["The Magician", "Ace of Wands"],
+          "tara_overlay": "White Tara - Compassionate Healing",
+          "crystal": "Clear Quartz",
+          "symbol": "⚡",
+          "teaching_function": "Spark of Divine Consciousness - Your healing journey begins",
+          "related_gates": [8, 15, 22, 29, 36],
+          "daemon_guardian": "Ignitus the Awakener - Guardian of Sacred Beginnings",
+          "notes": "The first breath of your healing journey. Honor where you are now.",
+          "angels_connection": "Vehuiah - Divine Will",
+          "alchemy_operation": "calcination - burning away what no longer serves",
+          "reiki_symbol": "Cho Ku Rei - Power symbol for manifestation",
+          "mystery_house_room": "respawn_gate",
+          "portal_access": ["sonic_sanctum", "creative_infinity_studio"],
+          "safety_level": "gentle_introduction",
+          "trauma_considerations": "Always honors current capacity"
+        }
+      ]
     },
-    "stylepack_mapping": {
-      "templar_cross": "Mars-ruled Fire angels (Aries, Scorpio)",
-      "shekhinah_marian": "Venus/Moon-ruled Earth/Water angels",
-      "enochian_astral": "Mercury-ruled Air angels", 
-      "alchemy_quadrivium": "Sun-ruled Fire angels (Leo)",
-      "druidic_greenman": "Saturn-ruled Earth/Air angels",
-      "mesoamerican_plumed": "Jupiter-ruled Fire/Water angels"
+
+    "angels_72_complete": {
+      "source": "angels72.json",
+      "total_angels": 72,
+      "completion_status": "fully_populated",
+      "toggle_key": "angels_72",
+      "categories": ["fire_angels", "earth_angels", "air_angels", "water_angels"],
+      "integration_with_codex": "Each codex node can invoke 2-3 complementary angels",
+      "sample_integration": {
+        "node_1_angels": ["Vehuiah", "Jeliel", "Sitael"],
+        "node_8_angels": ["Achaiah", "Cahetel", "Haziel"],
+        "node_15_angels": ["Aniel", "Haamiah", "Rehael"]
+      },
+      "stylepack_mapping": {
+        "templar_cross": "Mars-ruled Fire angels (Aries, Scorpio)",
+        "shekhinah_marian": "Venus/Moon-ruled Earth/Water angels",
+        "enochian_astral": "Mercury-ruled Air angels", 
+        "alchemy_quadrivium": "Sun-ruled Fire angels (Leo)",
+        "druidic_greenman": "Saturn-ruled Earth/Air angels",
+        "mesoamerican_plumed": "Jupiter-ruled Fire/Water angels"
+      }
+    },
+
+    "alchemy_complete": {
+      "source": "alchemy.json + extended_operations",
+      "elements": 5,
+      "operations": 7,
+      "completion_status": "fully_populated_with_extensions",
+      "toggle_key": "alchemy_operations",
+      "extended_data": {
+        "emotional_alchemy": {
+          "fear_to_courage": {
+            "operation": "calcination",
+            "element_path": "Earth → Fire",
+            "frequency": "741Hz",
+            "crystal": "Tiger's Eye",
+            "angel": "Vehuiah",
+            "process": "Burn through fear with divine will"
+          },
+          "anger_to_compassion": {
+            "operation": "dissolution", 
+            "element_path": "Fire → Water",
+            "frequency": "639Hz",
+            "crystal": "Rose Quartz",
+            "angel": "Leuviah",
+            "process": "Dissolve anger in the waters of compassion"
+          },
+          "sadness_to_wisdom": {
+            "operation": "separation",
+            "element_path": "Water → Air",
+            "frequency": "528Hz", 
+            "crystal": "Amethyst",
+            "angel": "Iezalel",
+            "process": "Separate wisdom from suffering"
+          }
+        }
+      }
+    },
+
+    "sacred_geometry_patterns": {
+      "source": "generated_from_codex_analysis",
+      "total_patterns": 33,
+      "completion_status": "generated_procedurally",
+      "toggle_key": "sacred_geometry",
+      "pattern_categories": {
+        "healing_mandalas": ["flower_of_life", "metatron_cube", "sri_yantra"],
+        "protection_symbols": ["pentagram", "hexagram", "octagram"], 
+        "manifestation_grids": ["golden_ratio_spiral", "fibonacci_sequence", "vesica_piscis"],
+        "balance_patterns": ["yin_yang", "triskelion", "quadrivium_square"],
+        "transcendence_forms": ["merkaba", "infinity_symbol", "ouroboros"]
+      },
+      "codex_mapping": "Each node has 2-3 associated geometric patterns"
+    },
+
+    "tarot_integration": {
+      "source": "traditional_tarot + codex_correlations",
+      "total_cards": 78,
+      "completion_status": "mapped_to_codex_nodes",
+      "toggle_key": "tarot_system",
+      "special_spreads": {
+        "codex_healing_spread": {
+          "positions": 7,
+          "layout": "chakra_alignment",
+          "purpose": "Identify healing priorities and pathways"
+        },
+        "angel_guidance_spread": {
+          "positions": 3,
+          "layout": "past_present_future_with_angelic_messengers",
+          "purpose": "Receive angelic guidance for current situation"
+        },
+        "alchemy_transformation_spread": {
+          "positions": 7,
+          "layout": "seven_operations_pathway", 
+          "purpose": "Map your current transformation process"
+        }
+      }
+    },
+
+    "crystal_healing_database": {
+      "source": "traditional_crystal_healing + frequency_correlations",
+      "total_crystals": 144,
+      "completion_status": "mapped_to_frequencies_and_nodes",
+      "toggle_key": "crystal_frequencies",
+      "frequency_mappings": {
+        "396Hz": ["Hematite", "Black Tourmaline", "Smoky Quartz"],
+        "528Hz": ["Rose Quartz", "Green Aventurine", "Prehnite"],
+        "639Hz": ["Blue Lace Agate", "Sodalite", "Lapis Lazuli"],
+        "741Hz": ["Citrine", "Carnelian", "Sunstone"],
+        "852Hz": ["Amethyst", "Clear Quartz", "Selenite"],
+        "963Hz": ["Diamond", "Moldavite", "Phenacite"]
+      }
+    },
+
+    "chakra_system_expanded": {
+      "source": "traditional_7_chakras + extended_chakra_system",
+      "total_chakras": 12,
+      "completion_status": "fully_mapped_with_codex_integration",
+      "toggle_key": "chakra_system",
+      "expanded_system": {
+        "traditional_7": ["Root", "Sacral", "Solar Plexus", "Heart", "Throat", "Third Eye", "Crown"],
+        "extended_5": ["Earth Star", "Soul Star", "Universal", "Galactic", "Divine Gateway"],
+        "codex_correlations": "Each chakra corresponds to 12 codex nodes (144/12 = 12)"
+      }
+    },
+
+    "daemon_guardian_profiles": {
+      "source": "generated_from_codex_nodes + jungian_psychology",
+      "total_guardians": 144,
+      "completion_status": "144_unique_guardians_created",
+      "toggle_key": "daemon_guardians", 
+      "guardian_types": {
+        "awakener_guardians": "Guide new beginnings and breakthroughs",
+        "protector_guardians": "Shield during vulnerable healing work",
+        "integration_guardians": "Help merge new wisdom with daily life",
+        "transcendence_guardians": "Support spiritual evolution",
+        "service_guardians": "Guide sharing gifts with others"
+      },
+      "trauma_informed_approach": "All guardians trained in gentle, non-forcing guidance"
+    },
+
+    "tara_overlay_system": {
+      "source": "21_taras_buddhist_tradition + color_therapy",
+      "total_taras": 21,
+      "completion_status": "mapped_to_healing_functions",
+      "toggle_key": "tara_overlays",
+      "tara_specialties": {
+        "White_Tara": "Longevity and healing",
+        "Green_Tara": "Swift protection and action",
+        "Red_Tara": "Fierce compassion and boundaries",
+        "Yellow_Tara": "Wealth and abundance (all forms)",
+        "Blue_Tara": "Deep wisdom and transformation"
+      },
+      "codex_integration": "Each node can invoke appropriate Tara energy"
+    },
+
+    "reiki_symbol_integration": {
+      "source": "traditional_reiki_symbols + modern_reiki_developments",
+      "total_symbols": 12,
+      "completion_status": "integrated_with_frequency_healing",
+      "toggle_key": "reiki_symbols",
+      "symbol_categories": {
+        "traditional_4": ["Cho Ku Rei", "Sei He Ki", "Hon Sha Ze Sho Nen", "Dai Ko Myo"],
+        "modern_additions": ["Raku", "Zonar", "Halu", "Harth"],
+        "karuna_symbols": ["Om", "Kriya", "Iava", "Shanti"]
+      }
+    },
+
+    "mystery_house_architecture": {
+      "source": "magical-mystery-house.json + room_expansions",
+      "total_rooms": 99,
+      "completion_status": "10_core_rooms_detailed_89_expansion_ready",
+      "toggle_key": "mystery_house_rooms",
+      "room_unlock_system": "Progressive unlocking based on healing integration"
+    },
+
+    "portal_network_complete": {
+      "source": "omniversal-respawn-gates.json + realm_implementations",
+      "total_realms": 6,
+      "total_portals": "infinite_contextual_generation",
+      "completion_status": "fully_implemented",
+      "toggle_key": "portal_network"
     }
   },
 
